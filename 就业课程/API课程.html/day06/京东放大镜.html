@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东放大镜</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="./jd.js"></script>
+
+    <style>
+        .preview_wrap {
+            width: 400px;
+            height: 590px;
+            margin-top: 50px;
+        }
+
+        .preview_img {
+            position: relative;
+            height: 398px;
+            border: 1px solid #ccc;
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-color: #FEDE4F;
+            opacity: .5;
+            border: 1px solid #ccc;
+            cursor: move;
+        }
+
+        .big {
+            display: none;
+            position: absolute;
+            left: 410px;
+            top: 0;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            z-index: 999;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .big img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="preview_wrap fl">
+        <div class="preview_img">
+            <div><img src="./upload/s3.png" alt=""></div>
+            <div class="mask"></div>
+
+            <div class="big">
+
+                <img src="./upload/big.jpg" alt="" class="bigImg">
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

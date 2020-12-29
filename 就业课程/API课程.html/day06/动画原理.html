@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画原理</title>
+
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+    <button>按钮7</button>
+    <script>
+
+        var dv = document.querySelector('div');
+        var btn = document.querySelector('button');
+
+        btn.onclick = function () {
+            1000 - dv.offsetLeft;
+            var tim = setInterval(function () {
+
+                dv.style.left = dv.offsetLeft + Math.ceil((1000 - dv.offsetLeft) / 1000) + 'px';
+                console.log(dv.offsetLeft);
+
+                if (dv.offsetLeft >= 1000) {
+                    console.log(123);
+                    clearInterval(tim);
+
+                }
+            }, .1)
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用const关键字声明常量</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+
+    <script type="text/javascript">
+        // 使用const关键字声明的常量具有块级作用域
+        // if (true) {
+        // 	const a = 10;
+        // 	if (true) {
+        // 		const a = 20;
+        // 		console.log(a);
+        // 	}
+        // 	console.log(a);
+        // }
+        // console.log(a);
+
+        // 使用const关键字声明的常量必须赋初始值
+        // const PI = 3.14;
+
+        // 常量声明后值不可更改 
+        const PI = 3.14;
+        // PI = 100;
+        const ary = [100, 200];
+        ary[0] = 123; // 单个更改可以
+        ary = [1, 2] // 整体更改不行
+        console.log(ary);
+
+    </script>
+
+</body>
+
+</html>

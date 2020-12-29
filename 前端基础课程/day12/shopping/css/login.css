@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?tomleg');
+    src:  url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+      url('../fonts/icomoon.woff?tomleg') format('woff'),
+      url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1200px;
+    /* height: 3000px; */
+    margin: 0 auto;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.zuo {
+    /* position: absolute; */
+    width: 171px;
+    height: 55px;
+    /* background-color: skyblue; */
+    top: 25px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.zuo a {
+    display: block;
+    width: 171px;
+    height: 55px;
+    background: url(../images/pyg-1.png) no-repeat;
+    /* font-size: 0; 京东的做法*/
+    /* 淘宝的做法，让文字隐藏 */
+    text-indent: -999px;
+    overflow: hidden;
+}
+.to {
+    width: 100%;
+    height: 486px;
+    background-color: #7e00ff;
+}
+ 
+.footer {
+    height: 417px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.footer .d {
+    height: 417px;
+    background-color: pink;
+}
+
+.footer .d .up {
+    height: 80px;
+    background-color: skyblue;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer .d .up ul li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    background-color: yellow;
+    padding-left: 35px;
+}
+
+.footer .d .up ul li:nth-child(1) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -253px -2px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(2) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -253px -54px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(3) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -257px -105px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(4) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -257px -155px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(5) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -257px -207px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li h4 {
+    font-size: 14px;
+}
+
+.footer .d .up ul li .tb {
+    margin-top: 6px;
+}
+
+.footer .d .m {
+    height: 187px;
+    background-color: yellow;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer .d .m dl {
+    float: left;
+    width: 200px;
+    padding-left: 40px;
+    /* 用margin-left也可以，但是要保证每个dl有合适的宽度即可 */
+    padding-top: 20px;
+}
+
+.footer .d dl:last-child {
+    width: 120px;
+    text-align: center;
+}
+
+.footer .d .m dl dt {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #484848;
+}
+
+.footer .down {
+    text-align: center;
+}
+
+.footer .down .s {
+    margin-top: 20px;
+}
+
+.footer .down .s a {
+    padding: 0 10px;
+}
+
+.footer .down .z {
+    margin-top: 10px;
+    line-height: 20px;
+}

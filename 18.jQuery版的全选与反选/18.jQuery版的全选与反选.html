@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery版的全选与反选</title>
+    <script src="./jquery.min.js"></script>
+    <script src="./my.js"></script>
+
+    <style>
+        .w {
+            position: relative;
+            margin: 100px auto;
+            margin-left: 100px;
+        }
+
+        .w .ab {
+            position: absolute;
+            top: -30px;
+            left: -37px;
+        }
+
+        .w .cd {
+            position: absolute;
+            top: -30px;
+            left: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <div class="cart-warp">
+            <div class="cart-thead">
+                <div class="t-checkbox ab">
+                    <input type="checkbox" name="" id="" class="checkall"> 全选
+
+                </div>
+                <div class="t-checkbox cd">
+                    <input type="button" name="" value="反选" id="" class="checkall no">
+                    <!-- <button>反选</button> -->
+                </div>
+
+            </div>
+
+            <div class="cart-item check-cart-item">
+                <div class="p-checkbox">
+                    <input type="checkbox" name="" id="" checked class="j-checkbox">
+                </div>
+            </div>
+            <div class="p-price">张三</div>
+
+            <div class="cart-item">
+                <div class="p-checkbox">
+                    <input type="checkbox" name="" id="" class="j-checkbox">
+                </div>
+                <div class="p-price">李四</div>
+            </div>
+
+            <div class="cart-item">
+                <div class="p-checkbox">
+                    <input type="checkbox" name="" id="" class="j-checkbox">
+                </div>
+                <div class="p-price">麻子</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="">
+
+        var inps = document.querySelectorAll('input');
+
+        $(".no").click(function () {
+
+            $('inps').removeClass('check-cart-item');
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计字符元素出现的次数</title>
+</head>
+
+<body>
+    <script>
+
+        var a = 'sddfghjdkhlqpf';
+        var obj = {};
+        for (var i = 0; i < a.length; i++) {
+            var c = a[i]
+            if (obj[c] == undefined) {
+                obj[c] = 1
+            } else {
+                obj[c] = obj[c] + 1
+            }
+        }
+        console.log(obj);
+
+        // 
+        var max = 0;
+        var ch = '';
+        for (var key in obj) {
+            if (obj[key] > max) {
+                max = obj[key];
+                ch = key;
+            }
+        }
+
+        console.log('出现最多的字符是: ' + ch);
+        console.log('出现最多的次数是: ' + max);
+
+
+
+
+    </script>
+</body>
+
+</html>

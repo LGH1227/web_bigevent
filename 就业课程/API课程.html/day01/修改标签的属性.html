@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改标签的属性</title>
+
+    <style>
+        button {
+            display: block;
+            margin: 0 auto;
+        }
+
+        img {
+            display: block;
+            width: 512px;
+            height: 100%;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <button id="zdj">战斗机</button>
+    <button id="ysj">运输机</button>
+    <img src="images/ldh.jpg" alt="" title="刘德华">
+
+    <script>
+        var ldh = document.getElementById('ldh');
+        var zxy = document.getElementById('zxy');
+        var zdj = document.getElementById('zdj');
+        var ysj = document.getElementById('ysj');
+        var img = document.querySelector('img');
+
+        ldh.onclick = function () {
+
+            console.log(img.innerHTML);
+            img.src = "images/ldh.jpg";
+            img.title = "刘德华"
+        }
+        zxy.onclick = function () {
+
+            console.log(img.innerHTML);
+            img.src = "images/zxy.jpg";
+            img.title = "张学友"
+        }
+        zdj.onclick = function () {
+
+            console.log(img.innerHTML);
+            img.src = "images/01.jpg";
+            img.title = "战斗机"
+        }
+        ysj.onclick = function () {
+
+            console.log(img.innerHTML);
+            img.src = "images/02.jpg";
+            img.title = "运输机"
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

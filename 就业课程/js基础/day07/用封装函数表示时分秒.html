@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用封装函数表示时分秒</title>
+</head>
+
+<body>
+    <script>
+        function getTime() {
+            var time = new Date();
+
+            var y = time.getFullYear();
+            y = y < 10 ? '0' + y : y; // 用三元运算符补0
+
+            var mon = time.getMonth() + 1;
+            mon = mon < 10 ? '0' + mon : mon;
+
+            var d = time.getDate();
+            d = d < 10 ? '0' + d : d;
+
+
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day = time.getDay();
+
+            return y + ' ' + mon + ' ' + d + ' ' + h + ':' + m + ':' + s + ' ' + arr[day];
+        }
+        console.log(getTime());
+
+
+    </script>
+</body>
+
+</html>

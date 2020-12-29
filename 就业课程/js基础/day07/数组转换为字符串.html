@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组转换为字符串</title>
+</head>
+
+<body>
+
+    <script>
+        // 1，toString()将数组转化为字符串
+        var arr = [1, 2, 3];
+        console.log(arr.toString());
+        console.log(typeof arr.toString());
+
+        // 2,join(分隔符)
+        var arr1 = ['green', 'blue', 'pink']
+        console.log(arr1.join());
+        console.log(arr1.join('-'));
+        console.log(arr1.join('$'));
+        console.log(arr1.join('￥'));
+        console.log(arr1.join('&'));
+
+        var a = [1, 2, 3, 4, 5];
+        var b = [6, 7, 8, 9, 10];
+        //  cconcat = a + b;
+        console.log(a.concat(6, 7, 8, 9, 10));
+        document.write(a.concat(6, 7, 8, 9, 10));
+        console.log(a.concat(b));
+
+        console.log(a.slice(0, 4));
+        console.log(a.splice(0, 5));
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

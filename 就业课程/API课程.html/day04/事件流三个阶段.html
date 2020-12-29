@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件流三个阶段</title>
+
+    <style>
+        .father {
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            line-height: 200px;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        // 1, 捕获阶段 如果addEventListener 第三个参数是 true 那么则
+        // 处于捕获阶段  document -> html -> body -> father -> son
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function () {
+            alert('son');
+        }, true)
+
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function () {
+            alert('father');
+        }, true)
+
+        // 2. 冒泡阶段 如果addEventListener 第三个参数是 false 或者 省略 
+        // 那么则处于冒泡阶段  son -> father ->body -> html -> document
+
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function () {
+            alert('son');
+        }, false)
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function () {
+            alert('father');
+        }, false)
+        var document = document.querySelector('.document');
+        document.addEventListener('click', function (ddocument) {
+            alert('document');
+        }, false)
+ 
+
+    </script>
+
+
+
+
+</body>
+
+</html>

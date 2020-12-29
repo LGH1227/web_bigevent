@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>创建对象的三种方式</title>
+</head>
+
+<body>
+
+    <script>
+        // 利用字面量创建对象
+        // var obj = {}; //创建了一个空的对象
+
+        var obj = {
+            uname: '张三疯',
+            age: 18,
+            sex: '男',
+            sayHi: function () {
+                console.log('hi~');
+
+            }
+        }
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.sayHi();
+
+        // 作业
+        var obj = {
+            name: '可可',
+            type: '阿拉斯加犬',
+            age: '5岁',
+            color: '棕红色',
+            skill: function () {
+                console.log('bark,showFilm');
+
+            }
+        }
+        console.log(obj.name);
+        console.log(obj['type']);
+        console.log(obj.age);
+        console.log(obj.color);
+        obj.skill();
+
+        // 用new Object 创建对象
+
+        var obj = new Object();
+
+        obj.uname = '张三疯';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function () {
+            console.log('hi~');
+
+        }
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.sayHi();
+
+        // 作业
+        var obj = new Object();
+        obj.name = '鸣人';
+        obj.sex = '男';
+        obj.age = '19岁';
+        obj.skill = function () {
+            console.log('影分身术');
+
+        }
+        console.log(obj['name']);
+        console.log(obj['sex']);
+        console.log(obj['age']);
+        obj.skill();
+
+        // 用构造函数创建对象
+        // function 构造函数名() {
+        //     this.属性 = 值;
+        //     this.方法 = function () { }
+        // }
+        // new 构造函数名();
+        // 例子
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+
+            }
+
+        }
+        var ldh = new Star('刘德华', 18, '男');
+        console.log(typeof ldh);
+
+        console.log(ldh.name);
+        console.log(ldh['age']);
+        console.log(ldh['sex']);
+        ldh.sing('冰雨')
+        var zxy = new Star('张学友', 19, '男');
+        var lgh = new Star()
+        console.log(typeof zxy);
+
+        console.log(zxy['name']);
+        console.log(zxy['age']);
+        console.log(zxy['sex']);
+        zxy.sing('烦恼歌')
+
+        // 练习
+        function Hero(a, b, c) {
+            this.name = a;
+            this.type = b;
+            this.blood = c;
+            this.skill = function (attack) {
+                console.log(attack);
+
+            }
+        }
+        var LP = new Hero('廉颇', '力量型', '500血量')
+        console.log(LP);
+
+        console.log(LP.name);
+        console.log(LP['type']);
+        console.log(LP['blood']);
+        LP.skill('近战')
+
+        var HY = new Hero('后羿', '射手型', '100血量')
+        console.log(HY.name);
+        console.log(HY['type']);
+        console.log(HY['blood']);
+        LP.skill('远程')
+
+    </script>
+
+</body>
+
+</html>

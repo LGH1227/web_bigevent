@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给元素注册点击事件</title>
+</head>
+
+<body>
+
+    <div>我是点击之前的内容</div>
+    <input type="button" value="按钮1">
+
+    <p>你看我改变了吗？</p>
+    <button>按钮2</button>
+
+
+    <script>
+        var inp = document.querySelector('input');
+        // console.log(inp);
+        // console.dir(inp);
+
+
+
+        inp.onclick = function () {
+
+            var dv = document.querySelector('div')
+            console.dir(dv);
+            console.log(dv.innerHTML);
+            console.log(dv.innerText);
+            // alert('点我干嘛？');
+            dv.innerHTML = '我是你点击之后的内容<h1> 妖怪，哪里逃?</h1>';
+            // dv.innerText = '我是你点击之后的内容<h1> 这下完犊子了!</h1>';
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

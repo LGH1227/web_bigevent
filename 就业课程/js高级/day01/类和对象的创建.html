@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>类和对象的创建</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        // class 创建类
+        class Star {
+
+            constructor(uname, age) {
+
+                this.uname = uname;
+                this.age = age;
+            }
+
+            sing(song) {
+
+                console.log('我唱歌');
+                console.log(this.uname + ' 唱了首 ' + song);
+
+            }
+        }
+        // 利用start类生成对象  创建实例
+        // new Star();
+        var ldh = new Star('刘德华');
+        var lgh = new Star('罗广浩', 18);
+        console.log(ldh.uname);
+        console.log(lgh);
+        console.log(lgh.uname);
+        console.log(lgh.age);
+
+        lgh.sing('五环');
+
+    </script>
+
+</body>
+
+</html>

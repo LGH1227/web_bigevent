@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>叠放次序</title>
+    <style>
+        .box1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            z-index: 5;
+        }
+
+        .box2 {
+            position: absolute;
+            z-index: 2;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .box3 {
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            position: sticky;
+            top: 10px;
+            left: 20px;
+        }
+
+        .b {
+            position: relative;
+            width: 600px;
+            height: 700px;
+            background-color: violet;
+            margin: 100px auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="b">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+
+
+</body>
+
+</html>

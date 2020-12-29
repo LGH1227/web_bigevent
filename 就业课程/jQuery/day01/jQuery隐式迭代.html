@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery隐式迭代</title>
+
+    <script src="./jquery.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <div>惊喜不？意外不？兄dei</div>
+    <div>惊喜不？意外不？兄dei</div>
+    <div>惊喜不？意外不？兄dei</div>
+    <div>惊喜不？意外不？兄dei</div>
+    <ul>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+    </ul>
+    <script>
+        // $("div");
+        $("div").css("backgroundColor", "pink");
+        // $("div")[0].style.backgroundColor = 'pink';
+
+        $("ul li").css("color", "skyblue");
+        $("ul li").css("listStyle", "none");
+        $('ul li');
+        $('li')[0].style.fontSize = '16px';
+        $('li')[1].style.fontSize = '20px';
+        $('li')[2].style.fontSize = '30px';
+
+
+    </script>
+
+</body>
+
+</html>

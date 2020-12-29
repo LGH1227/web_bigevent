@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>juery</title>
+    <!-- 引入jquery文件 -->
+    <script src="jquery.min.js"></script>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <script>
+        // $('div').hide();
+        // 入口函数的两种写法
+
+        // 1, $(document).ready(function() {})
+        $(document).ready(function () {
+            $('div').hide();
+        })
+
+        // 2,$(function() {})
+
+        $(function () {
+            $('div').hide();
+        }) // 推荐第二种写法，因为简单
+
+    </script>
+    <div></div>
+</body>
+
+</html>

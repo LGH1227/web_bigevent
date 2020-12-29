@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言的发布2</title>
+
+    <style>
+        body {
+            padding: 100px;
+        }
+
+        div {
+            margin: 100px 50px;
+        }
+
+        textarea {
+
+            resize: none;
+            /* outline: none; */
+        }
+
+        li {
+            background-color: pink;
+            width: 300px;
+        }
+
+        li a {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>发布</button>
+        <ul></ul>
+    </div>
+
+
+
+    <script>
+
+        var tea = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+
+        btn.onclick = function () {
+
+            if (tea.value == '') {
+
+                alert('输入内容不能为空，请重新输入!');
+                return false;
+            } else {
+                console.log(tea.value);
+                btn.value = '删除';
+                var li = document.createElement('li');
+                ul.appendChild(li);
+                ul.insertBefore(li, ul.children[0]);
+                li.innerHTML = tea.value + "<a href='javascript:;' >删除</a>";
+
+                var as = document.querySelectorAll('a');
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function () {
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

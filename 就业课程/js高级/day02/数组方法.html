@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组方法</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+
+        // filter 返回的是一个数组
+        var arr = [12, 3, 66, 4, 88, 7];
+        var newArr = arr.filter(function (value, index) {
+
+            // return value >= 20; // 挑出大于等于20的元素
+            return value % 2 === 0; // 挑出为偶数的元素
+        })
+
+        console.log(newArr);
+
+
+    </script>
+
+</body>
+
+</html>

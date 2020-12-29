@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义属性值的获取</title>
+
+    <style>
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div id="demo" one="a"></div>
+    <script>
+        // 1,自定义属性值的获取
+        var div = document.querySelector('div');
+        console.log(div.id);
+        console.log(div.className);
+
+        console.log(div.getAttribute('id'));
+        console.log(div.getAttribute('one'));
+
+        // 2.属性值的设置
+        div.id = 'test';
+        console.log(div.id);
+        div.setAttribute('one', 'b');
+        console.log(div.getAttribute('one'));
+
+        div.className = 'bbc';
+        console.log(div.className);
+
+        div.setAttribute('class', 'wbc');
+        console.log(div.className);
+
+        // 3, 属性的移除 
+        div.removeAttribute('id');
+        console.log(div.id);
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

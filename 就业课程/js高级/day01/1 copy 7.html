@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        function Father(uname, age) {
+
+            // console.log(this);
+            this.uname = uname;
+            this.age = age;
+
+        }
+        function Son(uname, age, sex) {
+
+            // Father.call(this, uname, age);
+            this.sex = sex;
+        }
+
+        var son = new Son('小头儿子', '7岁', '男')
+        console.log(son);
+
+    </script>
+
+</body>
+
+</html>

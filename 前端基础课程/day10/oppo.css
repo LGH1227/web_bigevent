@@ -1,0 +1,409 @@
+/* .w {
+    width: 1176px;
+    margin:  0 auto;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px/1.5 "微软雅黑";
+    color: #393939;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.b {
+    height: 675px;
+    background-color: skyblue;
+}
+
+.c {
+    height: 108px;
+    background-color: slateblue;
+}
+
+.e {
+    height: 28px;
+    background-color: yellowgreen;
+}
+
+.e ul li {
+    float: right;
+    /* margin-left: 40px; */
+    margin-right: 30px;
+    line-height: 28px;
+    border-left: 1px solid #fff;
+    padding-left: 30px;
+}
+
+.e ul li a:hover {
+    /* font-size: 16px; */
+    background-color: yellow;
+    border-bottom: 2px solid #2aad6f;
+    padding-bottom: 5px;
+}
+
+.f {
+    height: 80px;
+    background-color: yellow;
+}
+
+.f img {
+    float: left;
+    margin-top: 12px;
+    margin-left: 80px;
+}
+
+.ff {
+    float: right;
+    width: 645px;
+    height: 65px;
+}
+
+.ff ul li {
+    float: left;
+}
+
+.ff .xh {
+    border-bottom: 2px solid #2aad6f;
+    padding-bottom: 5px;
+}
+
+.ff ul li a {
+    line-height: 80px;
+    margin-left: 40px;
+    color: #a8a8a8;
+    font-size: 15px;
+}
+
+.ff ul li a:hover {
+    font-size: 18px;
+    background-color: yellow;
+    border-bottom: 2px solid #2aad6f;
+    padding-bottom: 5px;
+}
+
+.d {
+    height: 567px;
+    background-color: pink;
+}
+
+.d img {
+    width: 100%;
+    height: 567px;
+}
+
+.h {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.g {
+    width: 1180px;
+    height: 940px;
+    background-color: pink;
+    margin: 0 auto;
+    margin-top: 70px;
+    /* margin-left: 95px; */
+}
+
+.g a:hover {
+    display: none;
+    background: rgba(0, 0, 0, .1);
+}
+
+.gg {
+    float: left;
+    margin: 10px 30px;
+    font-size: 14px;
+    margin-left: 45px;
+}
+
+.gg:hover {
+    font-size: 17px;
+    color: yellow;
+    text-decoration: underline;
+}
+
+.gh {
+    margin: auto 90px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #3b956c;
+    margin-left: 100px;
+}
+
+.gh:hover {
+    font-size: 17px;
+    color: yellow;
+    text-decoration: underline;
+}
+
+.g .gi {
+    position: absolute;
+    right: 0;
+    top: -75px;
+    width: 72px;
+    height: 78px;
+}
+
+.g ul li {
+    position: relative;
+    float: left;
+    width: 294px;
+    height: 470px;
+    background-color: skyblue;
+    border: 1px solid red;
+    margin-left: -1px;
+    margin-bottom: -1px;
+}
+
+.g ul li img {
+    margin-top: 75px;
+    width: 290px;
+    height: 310px;
+}
+
+.i {
+    width: 1180px;
+    height: 940px;
+    /* background-color: royalblue; */
+    margin-top: 135px;
+}
+
+.i ul li {
+    position: relative;
+    float: left;
+    width: 294px;
+    height: 470px;
+    /* background-color: skyblue; */
+    border: 1px solid red;
+    margin-left: -1px;
+    margin-bottom: -1px;
+}
+
+.i ul li .ic {
+    position: absolute;
+    right: -40px;
+    top: -90px;
+    width: 72px;
+    height: 78px;
+}
+
+.i ul li img {
+    width: 216px;
+    height: 250px;
+    /* background-color: pink; */
+    margin: 0 40px;
+    margin-top: 90px;
+}
+
+.i ul li .ia {
+    float: left;
+    font-size: 14px;
+    color: #393939;
+    margin-top: 30px;
+    margin-left: 45px;
+}
+
+.i ul li .ia:hover {
+    font-size: 15px;
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.i ul li .ib {
+    float: left;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f8657;
+    margin-top: 36px;
+    margin-left: 115px;
+    margin-bottom: 40px;
+}
+
+.i ul li .ib:hover {
+    font-size: 17px;
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.j {
+    height: 527px;
+    /* background-color: skyblue; */
+    margin-top: 70px;
+}
+
+.ja {
+    width: 1176px;
+    height: 128px;
+    /* background-color: pink; */
+}
+
+.jb {
+    /* width: 1180px; */
+    height: 160px;
+    /* background-color: pink; */
+    margin-top: 60px;
+}
+
+.jc {
+    /* width: 740px; */
+    /* height: 140px; */
+    /* background-color: pink; */
+    margin: 0 auto;
+}
+
+.jc dl {
+    float: left;
+    margin-right: 100px;
+    margin-left: 35px;
+    margin-top: 20px;
+}
+
+.jb dl dt {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.jb dl dd {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.jb .jd {
+    float: right;
+    width: 180px;
+    height: 140px;
+    /* background-color: yellow; */
+}
+
+.jd {
+    position: relative;
+    margin-top: 15px;
+}
+.jq {
+    position: absolute;
+    top: -28px;
+    right: -50px;
+}
+
+.je {
+    /* float: left; */
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.jf {
+    margin-left: 15px;
+}
+
+.jx {
+    width: 1180px;
+    height: 80px;
+    /* background-color: yellow; */
+    margin-top: 50px;
+    border-top: 1px solid red;
+}
+
+.jy {
+    float: left;
+    width: 500px;
+    height: 80px;
+    font-size: 12px;
+    margin-top: 30px;
+    /* cursor: pointer */
+}
+
+.jz {
+    float: right;
+    width: 192px;
+    height: 45px;
+    /* background-color: pink; */
+    margin-top: 15px;
+}
+
+.jy span {
+    display: inline-block;
+    width: 24px;
+    height: 25px;
+    background: url(images/icon-identification.png);
+    vertical-align: middle;
+    margin-left: 5px;
+    
+}
+.jy:hover span {
+    background-position: -24px 0;
+}
+
+.jz img {
+    float: right;
+}
+
+.oo {
+    float: left;
+    margin-top: 5px;
+}
+
+.ta {
+    display: block;
+    width: 42px;
+    height: 36px;
+    background: #ededed url(images/backtop-icon.png) no-repeat center;
+}
+
+.tb {
+    display: block;
+    margin-top: 2px;
+    width: 42px;
+    height: 36px;
+    background: #ededed url(images/feedback-icon.png) no-repeat center;
+}
+
+.backtop {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    margin-left: 600px;
+    width: 42px;
+    height: 74px;
+}

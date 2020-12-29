@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>增加li元素</button>
+    <ul>
+    </ul>
+    <script>
+
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        var newLi = document.createElement('li');
+        newLi.innerHTML = '我是li标签';
+        btn.onclick = function (e) {
+            ul.appendChild(newLi);
+        };
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

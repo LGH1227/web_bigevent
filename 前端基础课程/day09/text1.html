@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    ol li:first-child {
+        background-color: salmon;
+        
+    }
+    ol li:last-child {
+        background-color: skyblue;
+    }
+    ol li:nth-child(3) {
+        background-color: seagreen;
+    }
+    ol li:nth-child(even) {
+        background-color: slateblue;
+    }
+    ol li:nth-child(2n) {
+        background-color: violet;
+    }
+    ol li:nth-child(2n+1) {
+        background-color: yellow;
+    }
+    /* ol li:nth-child(n+5) {
+        background-color: aqua;
+    }
+    ol li:nth-child(-n+5) {
+        background-color: gray;
+    } */
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        margin: 0 auto;
+    }
+    div::before {
+        content: "我";
+    }
+    div::after {
+        content: "谁?"
+    }
+    .a {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        transition: all .5s;
+    }
+    .a:hover {
+width: 300px;
+height: 200px;
+background-color: skyblue;
+    }
+    .b {
+        width: 350px;
+        height: 30px;
+border-radius: 10px;
+    }
+    .c {
+        float: left;
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: red;
+        transition: all .5s;
+    }
+    .c:hover {
+        width: 350px;
+        /* height: 30px; */
+    }
+
+</style>
+</head>
+<body>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+       
+    </ol>
+    <div class="b"><div class="c"></div></div><br><br>
+    <div class="a"></div>
+    <div>
+        是
+    </div>
+</body>
+</html>

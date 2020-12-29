@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关闭二维码</title>
+
+
+    <style>
+        div {
+            position: relative;
+            color: #f40;
+            margin: 100px auto;
+        }
+
+        div img {
+            cursor: pointer;
+        }
+
+        div span {
+            position: absolute;
+            top: -30px;
+            left: 60px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <span>淘宝二维码</span>
+        <img id="a" src="images/wrong.png" alt="">
+        <img id="b" src="images/tao.png" alt="">
+
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        var a = document.getElementById('a');
+        var b = document.getElementById('b');
+
+
+        a.onclick = function () {
+            div.style.display = 'none'; // 直接让整个盒子隐藏
+            // a.style.display = 'none';
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

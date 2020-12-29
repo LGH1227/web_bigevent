@@ -1,0 +1,500 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1200px;
+    /* height: 3000px; */
+    margin: 0 auto;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 快捷导航模块start */
+
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+.shortcut ul li {
+    float: left;
+}
+
+/* .fr ul li span {
+    padding: 0 15px;
+    color: blue;
+} */
+
+/* 选择所有偶数的小li */
+
+.fr ul li:nth-child(even) {
+    width: 1px;
+    height: 12px;
+    background-color: red;
+    margin: 0 15px;
+    margin-top: 10px;
+}
+
+.arrow-icon::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+    margin-left: 8px;
+}
+
+/* 快捷导航模块 end */
+
+.header {
+    position: relative;
+    height: 106px;
+    /* background-color: pink; */
+}
+
+.zuo {
+    position: absolute;
+    width: 171px;
+    height: 55px;
+    background-color: skyblue;
+    top: 25px;
+}
+
+.zuo a {
+    display: block;
+    width: 171px;
+    height: 55px;
+    background: url(../images/pyg-1.png) no-repeat;
+    /* font-size: 0; 京东的做法*/
+    /* 淘宝的做法，让文字隐藏 */
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.zuo img {
+    position: absolute;
+    top: 10px;
+    left: 180px;
+}
+
+.zhong {
+    position: absolute;
+    width: 540px;
+    height: 56px;
+    background-color: skyblue;
+    left: 340px;
+    top: 25px;
+    border-top: 1px solid #b1191a;
+}
+
+.zhong .s {
+    width: 540px;
+    height: 35px;
+    background-color: #fff;
+}
+
+.s .l {
+    float: left;
+    width: 458px;
+    height: 35px;
+    background-color: #fff;
+    border: none;
+    text-indent: 10px;
+    border-left: 2px solid #b1191a;
+    border-bottom: 2px solid #b1191a;
+    /* outline: none; */
+}
+
+.s .r {
+    float: right;
+    width: 82px;
+    height: 35px;
+    background-color: #b1191a;
+    color: #fff;
+    font-size: 16px;
+    /* outline: none; */
+    /* border: none; */
+}
+
+.zhong .x {
+    /*  */
+    position: absolute;
+    width: 540px;
+    height: 21px;
+    top: 35px;
+    left: 0;
+    background-color: yellow;
+}
+
+.zhong .x a {
+    /* width: 20px; */
+    /* float: left; */
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+.you {
+    position: absolute;
+    float: right;
+    width: 140px;
+    height: 35px;
+    background-color: #f7f7f7;
+    top: 25px;
+    right: 60px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #dfdfdf;
+}
+
+.you span {
+    position: absolute;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    top: -5px;
+    left: 105px;
+    /* width: 16px; */
+    color: #fff;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 5px;
+    background-color: #e60012;
+}
+
+.you::before {
+    content: "\e93a";
+    font-family: 'icomoon';
+    margin-right: 5px;
+    color: #b1191a;
+}
+
+.you::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+    margin-left: 10px;
+}
+
+.sf {
+    height: 45px;
+    /* background-color: skyblue; */
+    border-bottom: 2px solid #b1191a;
+}
+
+.sf .sl {
+    float: left;
+    width: 210px;
+    height: 45px;
+    /* background-color: springgreen; */
+    color: #fff;
+    font-size: 16px;
+    background-color: #b1191a;
+    text-align: center;
+    line-height: 45px;
+}
+
+.sf .sl:hover {
+    display: block;
+}
+
+.sf .sr {
+    float: left;
+    width: 736px;
+    height: 45px;
+    /* background-color: pink; */
+    margin-left: 40px;
+}
+
+.sr ul li {
+    float: left;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 50px;
+}
+
+.nx {
+    position: relative;
+    background: url(../images/bj.png) no-repeat;
+}
+
+.nx img {
+    display: block;
+    margin: 0 auto;
+}
+
+.sj {
+    height: 461px;
+    /* background-color: palegoldenrod; */
+}
+
+.sj ul {
+    height: 465px;
+    width: 1212px;
+    /* background-color: red; */
+}
+
+.sj ul li {
+    position: relative;
+    float: left;
+    width: 288px;
+    height: 461px;
+    /* background-color: palevioletred; */
+    margin-right: 15px;
+}
+
+.sj ul li img {
+    position: absolute;
+    top: 25px;
+    left: 80px;
+}
+
+.sj ul li .b {
+    position: absolute;
+    left: 10px;
+    bottom: 125px;
+}
+
+.sj ul li .c {
+    position: absolute;
+    bottom: 90px;
+    left: 10px;
+    font-size: 22px;
+    color: #e60012;
+}
+
+.sj ul li .d {
+    position: absolute;
+    bottom: 95px;
+    left: 85px;
+    font-size: 14px;
+    color: #a4a4a4;
+    text-decoration: line-through;
+}
+
+.sj ul li .e {
+    position: absolute;
+    bottom: 65px;
+    left: 10px;
+    font-size: 14px;
+    color: #747474;
+}
+
+.sj ul li .f {
+    position: absolute;
+    bottom: 65px;
+    right: 15px;
+    font-size: 14px;
+    color: #747474;
+}
+
+.sj ul li .f .g {
+    padding: 5px;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    font-size: 14px;
+    color: #ed9596;
+}
+
+.sj ul li .dd {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 288px;
+    height: 51px;
+    background-color: #b1191a;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 51px;
+}
+
+.sj ul li .jd {
+    position: absolute;
+    bottom: 68px;
+    left: 73px;
+    width: 135px;
+    height: 15px;
+    border-radius: 7px;
+    border: 1px solid red;
+    /* background-color: yellow; */
+    /* padding: 1px; */
+}
+
+.sj ul li .jd span {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    float: left;
+    width: 115px;
+    height: 100%;
+    background-color: #ed282e;
+}
+
+.sj ul li .dd a {
+    color: #fff;
+}
+
+.sj ul li a img:hover {
+    margin-left: 5px;
+    margin-top: 3px;
+    transition: all .3s;
+    
+}
+.sj ul li:hover{
+    border: 1px solid red;
+}
+
+.ygd {
+    /* float: left; */
+    position: fixed;
+    width: 70px;
+    height: 114px;
+    bottom: 100px;
+    left: 50%;
+    margin-left: 610px;
+}
+.ygd img {
+    width: 50px;
+    height: 95%;
+}
+
+
+.footer {
+    margin-top: 280px;
+    height: 417px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.footer .d {
+    height: 417px;
+    background-color: pink;
+}
+
+.footer .d .up {
+    height: 80px;
+    background-color: skyblue;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer .d .up ul li {
+    float: left;
+    width: 240px;
+    height: 50px;
+    background-color: yellow;
+    padding-left: 35px;
+}
+
+.footer .d .up ul li:nth-child(1) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -253px -2px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(2) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -253px -54px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(3) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -257px -105px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(4) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -257px -155px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li:nth-child(5) h5 {
+    float: left;
+    width: 50px;
+    height: 50px;
+    /* background-color: violet; */
+    background: url(../images/icons.png) no-repeat -257px -207px;
+    margin-right: 8px;
+}
+
+.footer .d .up ul li h4 {
+    font-size: 14px;
+}
+
+.footer .d .up ul li .tb {
+    margin-top: 6px;
+}
+
+.footer .d .m {
+    height: 187px;
+    background-color: yellow;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer .d .m dl {
+    float: left;
+    width: 200px;
+    padding-left: 40px;
+    /* 用margin-left也可以，但是要保证每个dl有合适的宽度即可 */
+    padding-top: 20px;
+}
+
+.footer .d dl:last-child {
+    width: 120px;
+    text-align: center;
+}
+
+.footer .d .m dl dt {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #484848;
+}
+
+.footer .down {
+    text-align: center;
+}
+
+.footer .down .s {
+    margin-top: 20px;
+}
+
+.footer .down .s a {
+    padding: 0 10px;
+}
+
+.footer .down .z {
+    margin-top: 10px;
+    line-height: 20px;
+}

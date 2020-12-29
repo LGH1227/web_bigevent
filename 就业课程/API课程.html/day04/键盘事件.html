@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>键盘事件</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        // 1，按键弹起的时候触发
+        // document.onkeyup = function () {
+
+        //     alert('我弹起了#!');
+        //     console.log('我弹起了up!');
+        // }
+        document.addEventListener('keyup', function () {
+            console.log('我弹起了up!');
+
+        })
+        // 2，按键按下的时候触发
+        document.onkeydown = function () {
+
+            // alert('我按下了@!');
+            console.log('我按下了down!');
+        }
+        // // 3，按键按下的时候触发
+        document.onkeypress = function () {
+
+            // alert('我按下了!');
+            console.log('我按下了press!');
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局初体验</title>
+    <style>
+        div {
+            display: flex;
+            flex-direction: row;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            justify-content: flex-end;
+            justify-content: center;
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            flex-wrap: wrap;
+            /* 单行居中 */
+            align-items: center;
+            /* 多行居中 */
+            align-content: center; 
+            /* align-content: space-around; */
+            align-content: space-between;
+            /* align-items: stretch; */
+        }
+
+        div span {
+            /* float: left; */
+            width: 150px;
+            /* flex: 1; */
+            height: 100px;
+            background-color: purple;
+            margin-right: 5px;
+            margin-bottom: 5px;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+
+    </div>
+</body>
+
+</html>

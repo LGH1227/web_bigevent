@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" class="parent">
+        <button id="btn">点我试试</button>
+    </div>
+    <div id="div2" class="parent">
+        <span>我是span标签</span>
+    </div>
+    <script>
+
+        // var btn = document.getElementById('#btn');
+        // btn.onclick = function () {
+        //     console.log('我被点击了11...');
+        // };
+        var btn = div1.getElementsByTagName('button');
+        btn.onclick = function () {
+            console.log('我被点击了22...');
+        };
+
+        // var btn = document.querySelector('#btn');
+        // btn.onclick = function () {
+        //     console.log('我被点击了b...');
+        // };
+        // var div1 = document.querySelectorAll('div')[0];
+        // var btn = div1.children[0];
+        // btn.onclick = function () {
+        //     console.log('我被点击了ha...');
+        // };
+
+
+
+    </script>
+</body>
+
+</html>

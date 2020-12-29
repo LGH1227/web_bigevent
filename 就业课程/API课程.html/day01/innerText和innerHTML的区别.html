@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText和innerHTML的区别</title>
+</head>
+
+<body>
+    <div></div>
+    <p> 我是文字
+        <span>123</span>
+    </p>
+    <script>
+
+        // 1, innerText不识别字符串型的标签(不识别html标签,非标准，会去除空格和换行)
+        var div = document.querySelector('div');
+        div.innerText = '<strong> 今天</strong>是个好日子';
+
+        // 2, innerHTML识别字符串型的标签(识别html标签,W3C标准，保留空格和换行)
+        var div = document.querySelector('div');
+        div.innerHTML = '<strong>今天</strong>是个好日子';
+
+        var p = document.querySelector('p');
+        console.log(p.innerText);
+        console.log(p.innerHTML);
+
+
+
+    </script>
+</body>
+
+</html>

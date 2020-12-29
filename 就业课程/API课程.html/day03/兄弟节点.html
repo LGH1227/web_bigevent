@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟节点</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <!-- <span>我是span1</span> -->
+        <div>我是div</div>
+        <span>我是span2</span>
+        <a>我是a</a>
+    </div>
+    <script>
+        // 1, nextSibling / previousSibling 
+        // (得到的是下一个或上一个兄弟节点，可能是元素节点，也可能是文本节点)
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        var a = document.querySelector('a');
+
+        console.log(div.nextSibling);
+        console.log(div.previousSibling);
+        console.log(span.previousSibling);
+        console.log(a.previousSibling);
+        console.log(a.nextSibling);
+
+        // 2，nextElementSibling/ previousElementSibling
+        //    只获取下一个或上一个兄弟元素节点
+        console.log(span.nextElementSibling);
+        console.log(span.previousElementSibling);
+        console.log(div.previousElementSibling);
+
+
+        // 自己封装一个兼容性的函数
+        function getNextElementSibling(element) {
+
+            var el = element;
+            while (el = el.nextSibling) {
+
+                if (el.nodeType === 1) {
+                    return el;
+                }
+            }
+            return null;
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

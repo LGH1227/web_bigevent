@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+    var that;
+    <script>
+        class Tab {
+
+            constructor(id) {
+
+                that = this;
+
+                this.main = document.querySelector(id);
+                this.lis = this.main.querySelector('li');
+                this.sections = this.main.querySelector('section');
+                this.add = this.main.querySelector('.tabadd');
+                this.ul = this.main.querySelector('.fisrstnav ul:first-child');
+                this.fsection = this.main.querySelector('.tabscon');
+                this.init();
+
+            }
+            init() {
+
+                for (var i = 0; i < this.lis.length; i++) {
+
+                    this.lis[i].index = i;
+                    this.sections[i].onclick = this.toggleTab;
+                }
+            }
+
+            toggleTab() {
+
+                that.clearClass();
+                this.className = 'liactive';
+                that.sections[this.index].className = 'conactive';
+            }
+
+            clearClass() {
+
+                for (var i = 0; i < this.lis.length; i++) {
+
+                    this.lis[i].className = '';
+                    this.sections[i].className = '';
+                }
+            }
+
+            removeTab(e) {
+
+                e.stopPropagation();
+                var index = this.parentNode.index;
+                that.lis[index].remove();
+                that.sections[index].remove();
+                that.init();
+                index--;
+                that.lis[index] && that.lis[index].click();
+
+            }
+        }
+
+        new Tab('#tab');
+
+    </script>
+
+</body>
+
+</html>

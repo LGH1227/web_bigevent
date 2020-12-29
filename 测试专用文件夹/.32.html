@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <form action="test.html">
+        用户名:
+        <input type="text" name="username" id="username">
+        <br>
+        <input type="submit" value="提交" id="submit">
+    </form>
+</body>
+
+</html>
+<script>
+    var submit = document.querySelector('#submit');
+    var username = document.querySelector('#username');
+    submit.onclick = function (e) {
+
+        if (username.value == '') {
+            alert('用户名不能为空');
+            return false;
+        }
+        // if (username.value == '') {
+        //     alert('用户名不能为空');
+        // }
+        // if (username.value == '') {
+        //     alert('用户名不能为空');
+        //     return;
+        // }
+        // if (username.value == '') {
+        //     alert('用户名不能为空');
+        //     e.preventDefault();
+        // }
+    };
+</script>

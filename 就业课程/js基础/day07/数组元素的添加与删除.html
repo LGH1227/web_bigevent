@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组元素的添加与删除</title>
+</head>
+<style>
+    input {
+        outline: none;
+        /* border: 0; */
+    }
+</style>
+
+<body>
+    <form action="">
+        <input type="text" name='a'>
+        <input type="text" name="b">
+        <input type="submit">
+
+    </form>
+
+    <script>
+        // 数组里边自带添加元素的方法
+
+        // 1，push() 是从数组后边添加的，返回值是新数组的length长度
+        var arr = [1, 2, 3];
+        // arr.push(4, '罗老师');
+        console.log(arr.push(4, '罗老师'));
+
+        console.log(arr);
+
+        // 2,unshift()是从前边来添加的，返回值是新数组的length长度
+        var arr = [1, 2, 3];
+        // arr.unshift(4, '罗老师');
+        console.log(arr.unshift(4, '罗老师'));
+
+        console.log(arr);
+
+        // 删除元素的方法
+        //  shift() 是从最前边开始删除元素的，一次只能删除一个，返回值是删除的元素的值
+        //  pop() 是从最后边开始删除元素的，一次只能删除一个，返回值是删除的元素的值
+        var arr = [1, 2, 3, 4, "罗老师"];
+        // arr.pop()
+        // arr.pop()
+        console.log(arr.pop()); // 返回的是被删除的元素的值(数组的最后一项被删除)
+
+        console.log(arr);
+
+        // arr.shift();
+
+        console.log(arr.shift()); // 返回的是被删除的元素的值(数组的第一项被删除)
+
+        console.log(arr);
+
+
+
+ //
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>123</div>
+    <script>
+        // 1. event 就是一个事件对象 写到我们侦听函数的 小括号里面 当形参来看
+        // 2. 这个事件对象我们可以自己命名 比如 event 、 evt、 e
+        // 3. 事件对象也有兼容性问题 ie678 通过 window.event 兼容性的写法  e = e || window.event;
+        var div = document.querySelector('div');
+        // div.onclick = function (event) {
+        //     console.log(event);
+
+        // }
+        // div.addEventListener('click', function (event) {
+        //     console.log(event);
+
+        // })
+        div.onclick = function (e) {
+            // console.log(e);
+            // console.log(window.event);
+            e = e || window.event; // 处理ie 兼容性的问题
+
+            console.log(e);
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

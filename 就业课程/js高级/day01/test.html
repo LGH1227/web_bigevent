@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+
+        class Father {
+
+            constructor(x, y) {
+
+                this.x = x;
+                this.y = y;
+            }
+        }
+
+        class Son extends Father {
+
+            constructor(x, y, z) {
+
+                super(x, y)
+                this.z = z;
+            }
+        }
+
+        var son = new Son(1, 2, 3)
+        console.log(son);
+
+    </script>
+
+</body>
+
+</html>

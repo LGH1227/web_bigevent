@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取总的毫秒数(时间戳)</title>
+</head>
+
+<body>
+    <script>
+        var date = new Date();
+        console.log(date.valueOf()); // 现在时间距离1970.1.1总的毫秒数
+        console.log(date.getTime());
+
+        var date1 = +new Date(); // 此方法较为常用
+        console.log(date1);
+
+        console.log(Date.now()); // h5新增的方法
+
+        var a = new Date('2020-11-25 13:16:00');
+        var b = new Date('1970-01-01 00:00:00');
+
+        var c = a - b;
+        console.log(c);
+
+
+    </script>
+</body>
+
+</html>

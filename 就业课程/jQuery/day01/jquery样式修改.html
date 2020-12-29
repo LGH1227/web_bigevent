@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery样式修改</title>
+    <script src="./jquery.min.js"></script>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div> 我是他大舅! </div>
+
+    <script>
+        $(function () {
+
+            console.log($('div').css('width'));
+            $('div').css('width', 300);
+            console.log($('div').css('width'));
+            // $('div').css('display', 'none');
+            $('div').css({ color: 'red', 'font-size': 50, 'text-decoration': 'underline', 'margin-top': '50px', 'margin-left': '15px' })
+
+            console.log($('div').css('font-size'));
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型的转换</title>
+    <script>
+        // 1.普通(数值型)转换为字符串 (变量).toString
+        var a = 10;
+        var b = a.toString();
+        console.log(b);
+        console.log(typeof b);
+        // 2.数值型，强制转换为字符串 String(变量)
+        var a = 10;
+        var b = String(a);
+        console.log(b);
+        console.log(typeof b);
+        // 3. '+'拼接字符串去实现转换(隐式转换)
+        var a = 10;
+        var b = (a + '');
+        console.log(b);
+        console.log(typeof b);        
+    </script>
+    <script>
+        var a = '18';
+        // console.log(a);
+        console.log(parseInt(a));//将字符串转换为整数型数字类型
+        console.log(parseInt('3.14'));
+        console.log(parseFloat('3.14'));//将字符串转换为浮点型数字类型
+        // console.log(typeof a);
+        var b = '123';
+        console.log(Number(b));// Number是强制转换
+        console.log('12' - 0); //利用减法，乘法，除法，把字符类型转换为数字型
+        console.log('12' * 2);
+        console.log('12' / 2);
+
+        //转换为布尔型
+        var d = '';
+        console.log(Boolean(d)); //结果为:false 
+        console.log(Boolean(0)); //结果为:false
+        console.log(Boolean(null)); //结果为:false
+        console.log(Boolean(undefined)); //结果为:false
+        console.log(Boolean(NaN)); //结果为:false
+        console.log(Boolean('罗哥')); //结果为:ture
+        console.log(Boolean(12)); //结果为:ture
+        console.log(Boolean(false)); //结果为:false
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

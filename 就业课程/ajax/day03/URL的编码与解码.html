@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL的编码与解码</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        // encodeURI() 编码
+        var str = "好男人罗广浩"
+        var str1 = encodeURI(str)
+        console.log(str1);
+        console.log('~~~~~~~~~~~~~');
+        // decodeURI() 解码
+        var str2 = "%E7%BD%97%E5%B9%BF%E6%B5%A9"
+        var str3 = decodeURI(str2)
+        console.log(str3);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

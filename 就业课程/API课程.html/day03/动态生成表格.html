@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态生成表格</title>
+
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+        }
+
+        thead td {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+                <th>修改</th>
+                <th>评论</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
+
+
+        </tbody>
+
+
+    </table>
+    <script>
+        // 先获取数据
+        var datas = [
+            {
+                name: '罗广浩',
+                subject: 'english',
+                score: 120
+            }, {
+                name: '罗伯特',
+                subject: 'english',
+                score: 108
+            }, {
+                name: '罗斯福',
+                subject: 'english',
+                score: 97
+            }, {
+                name: '罗三炮',
+                subject: 'english',
+                score: 69
+            }, {
+                name: '罗克逊',
+                subject: 'english',
+                score: 88
+            }
+        ]
+        // 2, 往tbody里边创建行，有几个人(通过数组的长度) ，就创建几行
+        var tb = document.querySelector('tbody');
+        var td = document.createElement('td');
+        var tr = document.createElement('tr');
+
+        // 外层for 循环生成行，tr
+        for (var i = 0; i < datas.length; i++) {
+            // tbody里边创建 tr 行
+            var tr = document.createElement('tr');
+            tb.appendChild(tr);
+
+            // 里层for 循环生成列，td
+            for (var key in datas[i]) {
+
+                // tr 里边创建单元格 td
+                // td 数量的多少，取决于对象里边的属性个数
+                var td = document.createElement('td');
+                tr.appendChild(td);
+                // datas[i][key] 就是对象里边的每一个属性值
+                console.log(datas[i][key]);
+                // 将属性值赋给每一个单元格 td
+                td.innerHTML = datas[i][key];
+
+            }
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML = '<a href="javascript:;">删除</a>';
+
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML = '<a href="javascript:;"></a>';
+
+            var td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML = '<a href="javascript:;"></a>';
+        }
+
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                tb.removeChild(this.parentNode.parentNode);
+            }
+        }
+
+        // 遍历对象 
+        // for (var k in obj) {
+            // k得到的是属性名
+            // obj[k] 得到的是属性值
+        // }
+    </script>
+
+
+
+
+</body>
+
+</html>

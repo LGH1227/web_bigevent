@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>移动端网页特效</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- touches 是手指触摸屏幕的元素的集合 -->
+    <!-- targetTouches 是手指触摸到当前元素的集合 经常使用 -->
+    <!-- changedTouches 手指状态发生了改变的列表 从无到有 或者 从有到无 -->
+    <!-- 因为我们一般都是触摸元素 所以最经常使用的是 targetTouches -->
+    <script>
+        // 1, touchstart 手指刚触摸到手机屏幕的时候 触发的事件
+        document.addEventListener('touchstart', function (e) {
+            console.log('我回来了哈？');
+            console.log(e);
+
+        })
+        document.ontouchstart = function () {
+            console.log('我真的回来了哈!');
+
+        }
+        // 2, touchmove 当手指触摸到屏幕以后，在屏幕上移动的时候 触发
+
+        document.ontouchmove = function () {
+            console.log('你回来有什么事情？');
+
+        }
+        // 3, touchend 当手指离开屏幕的时候 触发
+        document.ontouchend = function (e) {
+            // console.log('我回来跟你领证啊!');
+            console.log(e);
+
+        }
+        // 当我们手指离开屏幕的时候，就没有了 touches 和 targetTouches 列表
+        // 但是会有 changedTouches
+
+
+    </script>
+
+</body>
+
+</html>

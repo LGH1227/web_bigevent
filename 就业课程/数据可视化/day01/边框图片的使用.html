@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>边框图片的使用</title>
+
+
+    <style>
+        div {
+
+            width: 400px;
+            height: 300px;
+            border: 15px solid red;
+            border-image-source: url(border.png);
+            border-image-slice: 30 30 30 30;
+            /* 顺序: 上边框 右边框 下边框 左边框 */
+            border-image-width: 30px 50px 40px 60px;
+            /* border-image-repeat: stretch; */
+            /* border-image-repeat: repeat; */
+            border-image-repeat: round;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>还有谁？</div>
+
+    <script>
+
+
+
+
+    </script>
+
+</body>
+
+</html>

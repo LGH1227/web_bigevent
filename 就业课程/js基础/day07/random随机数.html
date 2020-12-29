@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random随机数</title>
+</head>
+
+<body>
+
+    <script>
+        console.log(Math.random()); // 获取0~1之间的随机数
+
+
+        // Math.floor(Math.random() * (max - min) + 1) + min;
+        // 获取两个数之间的随机整数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min) + 1) + min;
+
+        }
+        console.log(getRandom(1, 10));
+        //  随机点名
+
+        var arr = ['罗广浩', '田言科', '刘宇', '某某某', '房东']
+        console.log(arr[getRandom(0, arr.length - 1)]);
+
+
+    </script>
+
+
+</body>
+
+</html>

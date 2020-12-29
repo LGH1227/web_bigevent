@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~时间对象~</title>
+</head>
+
+<body>
+
+    <script>
+
+        var date = new Date('1970-01-01 0:0:0')
+        console.log(date);
+
+        var nowTime = new Date()
+        console.log(nowTime);
+        console.log(nowTime.getMonth() + 1); // 返回的月份小1个月，需要月份+1才可以 
+
+
+        var year = nowTime.getFullYear()
+        var month = nowTime.getMonth() + 1
+        var dates = nowTime.getDate()
+        var xingqi = nowTime.getDay()
+        var hour = nowTime.getHours()
+        var minutes = nowTime.getMinutes()
+        var seconds = nowTime.getSeconds()
+        // var yue = month + 1
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        var day = nowTime.getDay()
+        console.log(year); // 返回当前日期的年份
+        console.log(month); // 返回当前日期的月份，要记得加一
+        // console.log(yue);
+        console.log(dates); // 返回的是几号
+        console.log(xingqi);// 返回当前日期为周几
+        console.log(hour); //返回当前日期的小时数
+        console.log(minutes);//返回当前日期的分钟数
+        console.log(seconds);//返回当前日期的秒数
+
+
+        var shijian = '当前时间为 ' + year + ' 年 ' + month + ' 月 ' + dates + ' 日 ' + hour + ':' + minutes + ':' + seconds + '\t' + arr[day]
+        console.log(shijian);
+
+
+
+
+
+
+
+
+        var a = new Date()
+        var b = new Date('2020-11-23 11:01:01')
+        console.log(a);
+        console.log(b);
+        console.log(b - a);
+
+    </script>
+
+
+</body>
+
+</html>

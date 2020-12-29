@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p style="height:3000px;"></p>
+    <button>点我试试</button>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                console.log('我被点击了...')
+            });
+        });
+    </script>
+</body>
+
+</html>

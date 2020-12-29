@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery的排他思想</title>
+
+    <script src="./jquery.min.js"></script>
+
+    <style>
+        button {
+            outline: none;
+            /* border: 0; */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+
+    <script>
+
+        $(function () {
+            $("button").click(function () {
+
+                // $(this).css("background", "yellow");
+
+                // $(this).siblings("button").css("background", "skyblue");
+                // 链式编程的写法
+                $(this).css("background", "yellow").siblings().css("background", "")
+                $(this).css("color", "").siblings().css("color", "red")
+                $(this).siblings().parent().css('background', 'skyblue')
+                // 把兄弟的爸爸 body 背景色 变成天蓝色 , 自己不变色
+            })
+        })
+
+
+    // 写于 2020.12.10.18: 05 中国.郑州.航空港区
+
+    </script>
+
+
+</body>
+
+</html>

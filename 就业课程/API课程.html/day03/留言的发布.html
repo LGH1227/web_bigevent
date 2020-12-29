@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言的发布</title>
+
+    <style>
+        textarea {
+            width: 200px;
+            height: 100px;
+            resize: none;
+            outline: none;
+        }
+
+        div {
+            /* display: block; */
+            margin: 100px 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+    <script>
+        var div = document.querySelector('div');
+        var textarea = document.createElement('textarea');
+        var button = document.createElement('button');
+        var li = document.createElement('li');
+
+        div.appendChild(textarea);
+
+        div.appendChild(button);
+        button.innerHTML = '发布';
+        div.appendChild(li);
+        li.innerHTML = '123';
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

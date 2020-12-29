@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        div {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+
+        div .b,
+        div .c {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        div .b {
+            left: 0;
+        }
+
+        div .c {
+            /* position: absolute; */
+            /* top: 50%; */
+            /* margin-top: -20px; */
+            right: 0;
+            /* width: 40px; */
+            /* height: 40px; */
+            /* color: #fff; */
+            /* line-height: 40px; */
+            /* text-align: center; */
+            /* border-radius: 20px; */
+            /* background-color: red; */
+            /* background-color: rgba(0, 0, 0, .3); */
+
+        }
+
+        .box {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            border-radius: 7px;
+            /* color: #fff; */
+            background-color: rgba(255, 255, 255, .3);
+            /* background-color: pink; */
+
+        }
+
+        .box li {
+
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            margin: 3px;
+
+            background-color: #fff;
+
+
+        }
+
+        .box .y {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="tb.jpg" alt="">
+        <span class="b">
+            < </span>
+
+                <span class="c">></span>
+
+                <div class="box">
+                    <ul>
+                        <li class="y"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

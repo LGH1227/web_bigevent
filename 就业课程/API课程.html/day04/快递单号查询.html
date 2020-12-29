@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快递单号查询</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            position: relative;
+            width: 500px;
+            margin: 100px auto;
+        }
+
+        .one {
+            display: none;
+            position: absolute;
+            top: -80px;
+            left: 0;
+            font-size: 50px;
+            border: 2px solid red;
+        }
+
+        input {
+            /* width: 180px; */
+            height: 35px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="one"></div>
+        <input type="text" placeholder="请输入您的快递单号">
+    </div>
+
+    <script>
+
+        var inp = document.querySelector('input');
+        var dv = document.querySelector('.one');
+
+
+        inp.onblur = function () {
+
+            var txt = this.value;
+            if (txt.trim().length == 0) {
+                alert('输入内容不能为空');
+            }
+            dv.style.display = 'none';
+        }
+
+
+        inp.onkeyup = function () {
+
+            var txt = this.value;
+
+            if (txt.trim().length == 0) {
+
+                alert('输入内容不能为空');
+                dv.style.display = 'none';
+
+            } else {
+                dv.style.display = 'block';
+                dv.innerHTML = txt;
+            }
+
+            inp.onfocus = function () {
+                dv.style.display = 'block';
+                var txt = this.value;
+            }
+
+            // inp.onblur = function () {
+
+            // var txt = this.value;
+            // if (txt.trim().length == 0) {
+            // alert('输入内容不能为空');
+            // }
+
+            // dv.style.display = 'none';
+            // }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

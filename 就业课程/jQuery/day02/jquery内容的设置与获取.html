@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery内容的设置与获取</title>
+
+    <script src="./js/jquery.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        还有谁？
+        <span>我是内容</span>
+    </div>
+    <input type="text" value="请输入内容">
+
+    <script>
+
+        $(function () {
+            // 获取元素里边的全部内容
+            console.log($('div').html());
+            // //只获取元素里边的文本内容
+            console.log($('div').text());
+            // // 设置元素里边的文本内容
+            // console.log($('div').text('完犊子了!'));
+            // console.log($('div').html('<p>我是p标签</p>'));
+            // console.log($('div').html());
+
+            console.log($('span').text());
+            //  获取表单里边的值
+            console.log($('input').val());
+            //  设置表单里边的值
+            $('input').val('奥特曼打过来了!');
+            // console.log($('input').val('奥特曼打过来了!'));
+            console.log($('input').val());
+
+            ;
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

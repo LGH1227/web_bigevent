@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECharts</title>
+    <!-- 1, 下载并引入echarts.min.js -->
+    <script src="../echarts.min.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            float: left;
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 20px;
+
+        }
+
+        .xy {
+            float: left;
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 20px;
+
+
+
+        }
+
+        .wc {
+            float: left;
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 20px;
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 2,准备一个具备大小的DOM容器,来装生成的图表 -->
+    <div class="box"></div>
+    <div class="xy"></div>
+    <div class="wc"></div>
+
+    <script>
+
+        // 3,初始化echarts实例对象
+        var myChart = echarts.init(document.querySelector('.box'));
+
+        // 4, 指定配置项和数据(option)
+        var option = {
+            title: {
+                text: '还有谁？'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'bar' // line, pie
+                // type: 'line'
+                // type: 'pie'
+            }]
+        };
+        // 5,将配置项设置给echarts实例对象
+        myChart.setOption(option);
+    </script>
+
+    <script>
+
+        // 3,初始化echarts实例对象
+        var myChart = echarts.init(document.querySelector('.xy'));
+
+        // 4, 指定配置项和数据(option)
+        var option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['谷歌', '搜狐', '百度']
+            },
+            // grid: {
+            //     left: '10%',
+            //     right: '10%',
+            //     bottom: '10%',
+            //     containlable: true
+            // },
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line' // bar, pie
+                // type: 'line'
+                // type: 'pie'
+            }]
+        };
+        // 5,将配置项设置给echarts实例对象
+        myChart.setOption(option);
+    </script>
+
+    <script>
+
+        var myChart = echarts.init(document.querySelector('.wc'));
+
+        var option = {
+
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                name: '个人资产',
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'pie' // line, pie
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+
+
+</body>
+
+</html>

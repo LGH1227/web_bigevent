@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沿X轴旋转</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+
+        img {
+            display: block;
+            margin: 100px auto;
+
+            transition: all 1s;
+        }
+
+        img:hover {
+            /* transform: rotate3d(1, 1, 0, 90deg); */
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./media/pig.jpg" alt="">
+</body>
+
+</html>

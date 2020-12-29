@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象拷贝</title>
+
+    <script src="../jquery.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+
+            // var targetObj = {};
+            // var obj = {
+            //     id: 1,
+            //     name: 'andy'
+            // }
+            // // $.extend(target,obj);
+            // $.extend(targetObj, obj);
+            // console.log(targetObj);
+
+            // var targetObj = {
+            //     id:0
+            // };
+            // var obj = {
+            //     id: 1,
+            //     name: 'andy'
+            // }
+            // // $.extend(target,obj);
+            // $.extend(targetObj, obj);
+            // console.log(targetObj);
+
+            var targetObj = {
+                id: 0,
+                msg: {
+                    sex: '男'
+                }
+            };
+            var obj = {
+                id: 1,
+                name: 'andy',
+                msg: {
+                    age: 18
+                }
+            }
+            // // $.extend(target,obj);
+            // $.extend(targetObj, obj);
+            // console.log(targetObj);
+            // targetObj.msg.age = 20;
+            // console.log(targetObj);
+            // console.log(obj);
+
+            $.extend(true, targetObj, obj);
+            targetObj.msg.age = 20;
+            console.log(targetObj);
+            console.log(obj);
+
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

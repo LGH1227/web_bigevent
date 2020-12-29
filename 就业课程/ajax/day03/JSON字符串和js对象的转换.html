@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON字符串和js对象的转换</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        var jsonStr = '{"a": "Hello", "b": "world"}'
+        var obj = JSON.parse(jsonStr)
+        console.log(obj)
+        console.log(typeof obj)
+        console.log('~~~~~~~~~~~~');
+
+        var obj2 = { a: 'hello', b: 'world', c: false }
+        var str = JSON.stringify(obj2)
+        console.log(str)
+        console.log(typeof str)
+    </script>
+
+</body>
+
+</html>

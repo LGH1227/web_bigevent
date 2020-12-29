@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax用法</title>
+
+    <script src="../jquery.js"></script>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <button id="btnGET">用ajax发起GET请求</button>
+
+    <script>
+        $(function () {
+
+            $('#btnGET').on('click', function () {
+
+                $.ajax({
+
+                    // type: 'GET',
+                    // url: 'http://www.liulongbin.top:3006/api/getbooks',
+                    // data: { id: 2 },
+                    // // data: { author: '吴承恩' },
+                    // success: function (res) {
+
+                    //     console.log(res);
+                    // }
+                    type: 'POST',
+                    url: 'http://www.liulongbin.top:3006/api/addbook',
+                    data: { bookname: '热血青年', author: 'professorLuo', publisher: '阿呆出版社' },
+                    // data: { author: '吴承恩' },
+                    success: function (res) {
+
+                        console.log(res);
+                    }
+
+                })
+            })
+        })
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点的创建与添加</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- <input type="text" value="1"> -->
+    <ol>
+        <li>123</li>
+    </ol>
+    <script>
+        // 1, .createElement() 创建元素节点 
+        var li = document.createElement('li');
+        var ol = document.querySelector('ol');
+        var input = document.createElement('input')
+        var div = document.createElement('div');
+
+        // 2, .appendChild() 添加元素节点
+        // 括号里边的元素添加到append前边
+        console.log(li);
+        ol.appendChild(li);
+        ol.appendChild(div);
+        div.innerHTML = '他是外国人';
+        // ol.appendParent(div);
+        li.innerHTML = '我是中国人!我热爱中国!'
+        ol.appendChild(input);
+        console.log(input);
+        input.type = 'checkbox';
+        input.type = 'password';
+        input.title = '你从哪里来？';
+        input.value = '你从哪里来';
+        
+        // 3, 在父元素的里边的某一项子元素前边，添加新的元素
+        var span = document.createElement('span');
+        ol.insertBefore(span, ol.children[0]);
+        // ol.insertAfter(span, ol.children[0]);
+        span.innerHTML = '他来自埃塞俄比亚!'
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

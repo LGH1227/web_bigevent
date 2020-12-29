@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跟随鼠标的天使</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            position: absolute;
+            top: 250px;
+            left: 600px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img src="./images/angel.gif" alt="">
+
+    <script>
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove', function (e) {
+            // console.log(document);
+
+            var x = e.pageX;
+            var y = e.pageY;
+            console.log('x坐标是' + x, 'y坐标是' + y);
+
+            pic.style.left = x - 30 + 'px';
+            pic.style.top = y - 65 + 'px';
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

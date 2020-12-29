@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>去重</title>
+</head>
+
+<body>
+    <script>
+
+        var a = '85872637471533203552943982';
+        var obj = {};
+        for (var i = 0; i < a.length; i++) {
+            var c = a[i]
+            if (obj[c] == undefined) {
+                obj[c] = 1
+            } else {
+                obj[c] = obj[c] + 1
+            }
+        }
+
+        // 
+        var max = 0;
+        var ch = '';
+        for (var key in obj) {
+            if (obj[key] > max) {
+                max = obj[key];
+                ch = key;
+            }
+        }
+
+        console.log('出现最多的字符是: ' + ch);
+        console.log('出现最多的次数是: ' + max);
+
+        function unique(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var demo1 = unique(['8', '5', '8', '7', '2', '6', '3', '7', '4', '7', '1', '5', '3', '3', '2', '0', '3', '5', '5', '2', '9', '4', '3', '9', '8', '2'])
+        console.log(demo1);
+
+        var arr = ['8', '5', '8', '7', '2', '6', '3', '7', '4', '7', '1', '5', '3', '3', '2', '0', '3', '5', '5', '2', '9', '4', '3', '9', '8', '2'];
+        for (var i = 0; i <= arr.length - 1; i++) {
+            for (var j = 0; j <= arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

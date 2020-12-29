@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery和DOM的转换</title>
+
+    <script src="./jquery.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <video src="./mov.mp4" muted></video>
+    <script>
+        // DOM对象转换为jQuery对象
+        // (1) 我们直接获取元素，得到的就是jQuery对象
+        // $('video');
+        // (2) 使用原生js 获取过来的 DOM对象
+        var myvideo = document.querySelector('video');
+        // myvideo.play(); // DOM 元素的播放方法
+        // $(myvideo).play();  jquery里面没有play 这个方法,所以无法播放
+        $(myvideo); // 用原生js获取到DOM元素后,
+        //  再使用 $ 符号进行包装就变成了jquery对象
+        console.log($(myvideo));
+
+        // 2.  jQuery对象转换为DOM对象
+        // $('video')[0];
+        // $('video').get(0);
+
+        $('video')[0].play();
+        // $('video').get(0).play();
+        // myvideo[0].play(); // DOM 元素也不能用jquery的方式去播放
+
+
+    </script>
+
+</body>
+
+</html>

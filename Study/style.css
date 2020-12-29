@@ -1,0 +1,33 @@
+div {
+    /* width: 600px; */
+    height: 150px;
+    color: aqua;
+    font-size: 80px;
+    background-color: cornflowerblue;
+    text-align: center;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+   
+   }
+   .two {
+       width: 800px;
+       height: 450px;
+       color: yellow;
+       font-size: 90px;
+       background-color: coral;
+       margin: 0 auto;
+       text-align: center;
+      
+  margin-top: 50px;
+  border-top-left-radius:50px;
+  border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+   }
+   .one {
+     margin-top: 50px;
+     text-decoration: underline;
+     border-top-left-radius:100px;
+     border-top-right-radius: 100px;
+    
+   }
+       

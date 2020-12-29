@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单的全选与反选</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 600px;
+            margin: 100px auto;
+
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+        }
+
+        table {
+            width: 600px;
+            /* background-color: #ccc; */
+            text-align: center;
+            border: 1px solid #c0c0c0;
+            border-collapse: collapse;
+        }
+
+        thead tr {
+            /* width: 500px; */
+            height: 45px;
+            background-color: skyblue;
+        }
+
+        tbody tr {
+            height: 35px;
+            /* border: 1px solid yellow; */
+            /* border: 1px solid #d0d0d0; */
+            background-color: #f0f0f0;
+            color: blue;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <th> <input type="checkbox" id="cball"> </th>
+                <th>
+                    商品
+                </th>
+                <th>
+                    价值
+                </th>
+            </thead>
+            <tbody id="cb">
+                <tr>
+
+                    <td><input type="checkbox"></td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox"> </td>
+                    <td>iPadpro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox"> </td>
+                    <td>iPad Air</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox"> </td>
+                    <td>Apple Watch</td>
+                    <td>2000</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+    <script>
+
+        var cball = document.getElementById('cball');
+        var cb = document.getElementById('cb').getElementsByTagName('input');
+
+        cball.onclick = function () {
+            console.log(23);
+            console.log(this.checked);
+            for (var i = 0; i < cb.length; i++) {
+                cb[i].checked = this.checked;
+            }
+
+        }
+        for (var i = 0; i < cb.length; i++) {
+            cb[i].onclick = function () {
+                var flag = true;
+                for (var i = 0; i < cb.length; i++) {
+                    if (!cb[i].checked) {  // 只要tbody里边的复选框有一个没有被选中，那么thead里边的复选框就不被选中!
+                        flag = false;
+                        break; // 退出for循环，只要有一个么有被选中，剩下的无须再循环(就是全选框也不被选中)
+                    }
+                }
+                cball.checked = flag;
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+        // 1, 用 RegExp对象 创建正则表达式
+        var regexp = new RegExp(/123/);
+        console.log(regexp);
+
+        // 2, 用字面量 创建正则表达式
+        var rg = /abc/; // 只要包含abc,返回结果都是true,否则为false
+        console.log(rg);
+        console.log(rg.test('abc'));
+        console.log(rg.test('abcd'));
+        console.log(rg.test('1abcd'));
+        console.log(rg.test('ab'));
+        console.log(rg.test(123));
+
+    </script>
+
+</body>
+
+</html>

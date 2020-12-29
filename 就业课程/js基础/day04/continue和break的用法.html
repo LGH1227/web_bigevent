@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue和break的用法</title>
+    <script>
+
+        // 退出当前循环，继续下一次循环
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue; // 只要遇到continue,就退出本次循环，直接跳到 i++
+            }
+            console.log('这是我第' + i + '次相亲!');
+
+        }
+        // 1~100 之间能被7整除之外的整数和
+        var sum = 0;
+        for (i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue; //你是生日？
+            }
+            sum += i;
+        }
+        console.log(sum);
+        // break 退出整个循环
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break;
+            }
+            console.log('这是我第' + i + '次相亲!');
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

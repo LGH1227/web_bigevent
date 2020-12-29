@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>递归函数</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+
+        var num = 1;
+        
+        function fn() {
+            console.log('打印的第' + num + '句话');
+
+            if (num == 6) {
+                return;
+            } else {
+                num++;
+                fn();
+            }
+
+        }
+        fn();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>带参数的get请求</title>
+
+    <script src="../jquery.js"></script>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <button id="btna">发起带参数的GET请求</button>
+
+    <script>
+
+        $(function () {
+
+            $('#btna').on('click', function () {
+
+                $.get('http://www.liulongbin.top:3006/api/getbooks', { id: 1 }, function (res) {
+                    console.log(res);
+                })
+                $.get('http://www.liulongbin.top:3006/api/getbooks', { id: 72256  }, function (res) {
+                    console.log(res);
+                })
+
+
+            })
+
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>

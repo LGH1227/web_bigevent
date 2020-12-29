@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交换变量值</title>
+    <script>
+        // 使用变量， 把左手的杯子和右手的苹果交换一下 
+        var zuo = '杯子';
+        var you = '苹果';
+        console.log(zuo);
+        console.log(you);
+
+        // 声明第三个变量
+        var table;
+        // 下面是，把杯子放到桌子上
+        table = zuo;
+        console.log(table);
+        // 下面是，把苹果放到左手
+        zuo = you;
+        console.log(zuo);
+        // 下面是，把杯子放到右手
+        you = table;
+        console.log(you);
+
+    </script>
+    <!-- 注意！只有阿拉伯数字才可以直接运算，其它的变量交换必须得设置第三个变量作为中间介质 -->
+    <script>
+        /* 不使用变量， 把a和b的值交换一下，让a=20,b=10 */
+        var a = 10;
+        var b = 20;
+        console.log(a);
+        console.log(b);
+        var a = a + b;
+        console.log(a);
+        var b = a - b;
+        console.log(b);
+        var a = a - b;
+        console.log(a);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

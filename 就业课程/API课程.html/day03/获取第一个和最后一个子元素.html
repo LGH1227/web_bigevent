@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素的获取</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <ol>
+        <li>我是ol里边的xiaoli1</li>
+        <li>我是ol里边的xiaoli2</li>
+        <li>我是ol里边的xiaoli3</li>
+        <li>我是ol里边的xiaoli4</li>
+    </ol>
+
+
+    <script>
+        // firstChild 与 lastChild 
+        var ol = document.querySelector('ol');
+        console.log(ol.firstChild); // 返回第一个子节点(有可能是文本节点，有可能是元素节点) 
+        console.log(ol.lastChild);
+
+        // firstElementChild 与 lastElementChild (有兼容性问题，ie9 以上才支持)
+        console.log(ol.firstElementChild); // 只返回第一个子元素节点  
+        console.log(ol.lastElementChild); // 只返回最后一个子元素节点
+
+        console.log(ol.children);
+        console.log(ol.children[0]); // 获取ol里边的第一个子元素节点
+        console.log(ol.children[1]); // 获取ol里边的第二个子元素节点
+        console.log(ol.children[2]); // 获取ol里边的第三个子元素节点
+        console.log(ol.children[ol.children.length - 1]); // 获取ol里边的最后一个子元素节点
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

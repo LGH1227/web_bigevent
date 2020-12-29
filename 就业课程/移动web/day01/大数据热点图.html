@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大数据热点图</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .o {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            background: url(media/map.png) no-repeat;
+            margin: 0 auto;
+        }
+
+
+
+
+
+
+        .bj {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            position: absolute;
+            border-radius: 4px;
+            bottom: 380px;
+            right: 190px;
+        }
+
+        .tb {
+            bottom: 120px;
+            right: 80px;
+        }
+
+        .gz {
+            bottom: 80px;
+            right: 170px;
+        }
+
+        .zx {
+            top: 330px;
+            right: 215px;
+        }
+
+        .bj div[class^=pulse] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+
+            box-shadow: 0 0 12px #009dfd;
+            animation: pulse 1.2s linear infinite;
+            transition: all .3s;
+        }
+
+        .o .bj .pulse2 {
+            animation-delay: .4s;
+        }
+
+        .o .bj .pulse3 {
+            animation-delay: .8s;
+        }
+
+        @keyframes pulse {
+            0% {}
+
+            70% {
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+
+        .zz {
+            position: relative;
+
+        }
+
+        .zz .zy {
+            position: absolute;
+            top: 336px;
+            right: 496px;
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="zz">
+        <div class="zy">郑州</div>
+    </div>
+    <div class="o ">
+        <div class="bj ">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="bj tb">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="bj gz">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="bj zx">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

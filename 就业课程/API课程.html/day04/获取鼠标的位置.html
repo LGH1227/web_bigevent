@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取鼠标的位置</title>
+
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        // 鼠标事件对象
+        document.addEventListener('click', function (e) {
+            // 1, client 得到的是鼠标在浏览器可视区的X和Y坐标
+            console.log(e);
+            console.log(e.clientX);
+            console.log(e.clientY);
+
+            // 2, page 得到的是，鼠标距离页面文档左边的X坐标和右边的Y坐标
+            console.log(e);
+            console.log(e.pageX);
+            console.log(e.pageY);
+
+            // 3, screen 得到的是,鼠标在电脑屏幕的X和Y坐标
+            console.log(e);
+            console.log(e.screenX);
+            console.log(e.screenY);
+
+
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

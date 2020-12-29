@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不对等虚线边框</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 1000px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .b {
+            position: relative;
+
+            width: 164px;
+            height: 407px;
+            background-color: pink;
+            margin: 100px auto;
+
+        }
+
+        .c {
+            position: absolute;
+            /* float: right; */
+            content: "";
+            top: 10px;
+            left: 6px;
+            width: 158px;
+            height: 386px;
+            background-color: skyblue;
+        }
+
+        .b .c ul li {
+            position: relative;
+            float: left;
+            width: 78px;
+            height: 59px;
+            border: 1px dashed red;
+            margin-left: -1px;
+            margin-top: -1px;
+
+        }
+
+        .b .c ul li img {
+            position: absolute;
+            content: "";
+            top: 15px;
+            left: 4px;
+        }
+
+        .b .c ul li .y {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 4px;
+        }
+
+        .b .c ul li:nth-child(2n+1) {
+            border-left: 0;
+        }
+
+
+        .b .c ul .x {
+            float: left;
+            width: 78px;
+            height: 45px;
+            background-color: yellow;
+        }
+
+        .b .c ul li .bb {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 2px;
+        }
+
+        .b .c ul li .ba {
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 1px;
+        }
+
+        .b .c ul li .bd {
+            position: absolute;
+            content: "";
+            top: 2px;
+            left: 0;
+        }
+
+
+
+        .b .c ul .z {
+            border-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="b">
+        <div class="c">
+            <ul>
+                <li class="x y"><img src="../day12/shopping/upload/hw.png" alt=""></li>
+                <li class="x y "><img class="ba" src="../day12/shopping/upload/so.png" alt=""></li>
+                <li><img class="bd" src="../day12/shopping/upload/mz.png" alt=""></li>
+                <li><img class="bb" src="../day12/shopping/upload/ls.png" alt=""></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="x z"></li>
+                <li class="x z"></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

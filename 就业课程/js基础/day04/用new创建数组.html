@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用new创建数组</title>
+    <script>
+
+        var arr = new Array(); // 用new创建了一个空的数组
+        var arr = new Array(2); // 直接写一个2，表示有两个空的数组元素
+        console.log(arr);
+
+        var arr = new Array(2, 3, 5); // 写多个数，用逗号','隔开，表示往数组里边加入了2,3,5三个元素
+        console.log(arr);
+
+
+        var arr = []; // 用数组字面量创建空的数组
+        var arr1 = [1, 2, '罗教授', true];
+        console.log(arr1);
+        console.log(arr1[2]); // 利用数组名加索引号的方式获取数组中的元素
+        var arr2 = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
+        // alert(arr2[6]);
+        console.log(arr2[6]);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

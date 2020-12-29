@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的筛选与排序</title>
+</head>
+
+<body>
+
+    <script>
+        // 筛选数组
+        var arr = [1500, 1200, 2000, 2100, 1800];
+        var newArr = [];
+        for (var i = 0; i <= arr.length; i++) {
+            if (arr[i] < 2000) {
+                // newArr[newArr.length] = arr[i];
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+
+        // 数组的翻转
+        var arr = ['red', 'pink', 'blue'];
+        arr.reverse();
+        console.log(arr);
+
+        // 数组的冒泡排序
+        var arr1 = [3, 4, 7, 1]; // 1，当数组中元素为个位数时的排序
+        arr1.sort();
+
+        console.log(arr1);
+        var arr1 = [13, 4, 77, 1, 7, 245];// 2，,当数组中元素为个位数时的排序
+        arr1.sort(function (a, b) {
+            // return a - b; // 升序的排列顺序
+            return b - a; // 降序的排列顺序
+        }
+        )
+        console.log(arr1);
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

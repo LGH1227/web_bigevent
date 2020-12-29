@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板引擎</title>
+
+    <script src="./template-web.js"></script>
+    <script src="./jquery.js"></script>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/html" id='tpl-user'>
+
+        <h1>{{username}}~~~~~~~~{{age}}</h1>
+        <h1>{{age}}</h1>
+        {{@ test}}
+        <div>
+          {{if flag===0}}
+           flag的值是0
+           {{else if flag===1}}
+           flag的值是1
+          {{/if}}
+        </div>
+
+        <ul>
+            {{each hobby}}
+             <li>索引是:{{$index}},循环项是:{{$value}}</li>
+             {{/each}}
+ 
+         </ul>
+ 
+
+    </script>
+    <script>
+
+        const user = {
+            username: 'tom',
+            age: 108,
+            test: '<h3>测试原文输出</h3>',
+            flag: 1,
+            hobby: ['吃饭', '睡觉', '打豆豆']
+
+        }
+
+        const str = template('tpl-user', user)
+        // console.log(typeof str);
+        console.log(str);
+        // document.querySelector('#container').innerHTML = str;
+        $('#container').html(str)
+    </script>
+
+</body>
+
+</html>

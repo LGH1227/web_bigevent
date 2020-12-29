@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.w {
+    width: 1290px;
+    margin: 0 auto;
+    
+}
+.he {
+  
+    height: 1500px;
+    /* background-color: skyblue; */
+}
+.b {
+    height: 63px;
+    /* background-color: springgreen; */
+}
+.c {
+    float: left;
+}
+ li {
+    list-style: none;
+
+}
+a {
+    text-decoration: none;
+}
+.c img {
+    width: 220px;
+    height: 35px;
+   margin: 16px 50px;
+    
+}
+.d {
+    float: right;
+  
+}
+.d ul li {
+    display: inline-block;
+    height: 63px;
+    
+    line-height: 63px;
+    margin: 0 20px;
+}
+.d ul li a {
+    font-size: 14px;
+    color: #677985;
+ }
+ .d a:hover {
+     font-size: 20px;
+     color: skyblue;
+     text-decoration: underline;
+
+ }
+.e img {
+
+    height: 525px;
+}
+.g {
+    float: left;
+}
+.g img {
+    width: 460px;
+    height: 418px;
+}
+.h {
+    float: right;
+    width: 750px;
+    height: 410px;
+    /* background-color: pink; */
+    margin: 20px;
+}
+.f .h h3 {
+    text-align: center;
+}
+.f .h p {
+    text-indent: 3em;
+    /* margin: 20px 35px; */
+}
+.f .h li {
+    float: right;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.f .h li a {
+    color: skyblue;
+}
+.f .h h3 {
+    margin: 22px;
+}
+ .h a:hover {
+    text-decoration: underline;
+    font-size: 25px;
+ }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sesstionStorage</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <input type="text">
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="del">清空所有数据</button>
+
+    <script>
+        console.log(localStorage.getItem('username'));
+
+        var input = document.querySelector('input');
+        var set = document.querySelector('.set');
+        // var get = document.querySelector('.get');
+        // var remove = document.querySelector('.remove');
+        // 存储数据
+        set.addEventListener('click', function () {
+            var val = input.value;
+            sessionStorage.setItem('uname', val);
+            sessionStorage.setItem('password', val);
+        })
+        // 获取数据
+        var get = document.querySelector('.get');
+        get.addEventListener('click', function () {
+            sessionStorage.getItem('uname');
+            console.log(sessionStorage.getItem('uname'));
+
+        })
+        // 删除数据
+        var remove = document.querySelector('.remove');
+        remove.addEventListener('click', function () {
+            sessionStorage.removeItem('uname');
+
+        })
+        // 清空所有数据
+        var del = document.querySelector('.del');
+        del.addEventListener('click', function () {
+            sessionStorage.clear();
+        })
+    </script>
+
+</body>
+
+</html>

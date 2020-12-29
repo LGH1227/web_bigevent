@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时间过滤器</title>
+
+    <script src="./template-web.js"></script>
+    <script src="./jquery.js"></script>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/html" id='tpl-user'>
+
+        <h1>{{username}}~~~~~~~~{{age}}</h1>
+        <h1>{{age}}</h1>
+
+         <h3>{{regtime|dateFormat}}</h3>
+
+    </script>
+    <script>
+
+        template.defaults.imports.dateFormat = function (date) {
+
+            // console.log(date);
+            var y = date.getFullYear()
+            var m = date.getMonth() + 1
+            var d = date.getDate()
+            var h = date.getHours()
+            var mt = date.getMinutes()
+            var s = date.getSeconds()
+            m = m < 10 ? '0' + m : m
+            d = d < 10 ? '0' + d : d
+            h = h < 10 ? '0' + h : h
+            mt = mt < 10 ? '0' + mt : mt
+            s = s < 10 ? '0' + s : s
+            return y + '-' + m + '-' + d + '-' + h + '-' + mt + '-' + s
+            // return y + ':' + m + ':' + d
+        }
+
+        const user = {
+            username: 'tom',
+            age: 108,
+            regtime: new Date()
+
+        }
+
+        const str = template('tpl-user', user)
+        console.log(str);
+        $('#container').html(str)
+    </script>
+
+</body>
+
+</html>

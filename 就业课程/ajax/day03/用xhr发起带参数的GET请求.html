@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用xhr发起带参数的GET请求</title>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <script>
+
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks?id=1')
+        xhr.send()
+        xhr.onreadystatechange = function () {
+            // xhr.readyState === 4  ajax请求完成 数据传输完成
+            // xhr.status === 200  服务器响应数据成功
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText)
+                // 获取服务器响应的数据
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

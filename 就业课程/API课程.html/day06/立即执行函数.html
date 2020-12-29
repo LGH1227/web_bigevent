@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        // 立即执行函数的语法: (function(){})() / (function(){}())
+        // 作用: 创建了一个独立的作用域，
+        // 里边所有变量都是局部变量，避免了命名冲突问题
+
+        var a = 10;
+        (function (b, c) {
+
+            var a = 20;
+            console.log('你在哪里？');
+            console.log(a);
+            console.log(b + c);
+
+        })(1, 2);
+
+        (function () {
+
+            var a = 30;
+            console.log('你在哪里？');
+            console.log(a);
+
+        })();
+
+        console.log((function () {
+
+            console.log('你在哪里？');
+        }));
+
+
+        (function sum(x, y) {
+
+            var a = 50;
+            console.log(' 你不是中毒了吗？');
+            console.log(a);
+            console.log(x + y);
+
+        }(3, 7));
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改元素的样式</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <div style="color:red">我是一行文字 </div>
+    <script>
+
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        var a = 0;
+
+        btn.onclick = function () {
+
+            console.dir(div);
+            console.dir(div.style);
+
+            if (a == 0) {
+                div.style.backgroundColor = 'skyblue';
+                div.style.color = 'black';
+                div.style.fontSize = '35px';
+                div.style.fontWeight = '700';
+
+                div.style.border = '10px solid red';
+                a++;
+
+            } else {
+                div.style.backgroundColor = 'greenyellow';
+                div.style.color = 'red';
+                div.style.fontSize = '16px';
+                div.style.fontWeight = '400';
+
+                div.style.border = '0';
+                a = 0;
+            }
+
+
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

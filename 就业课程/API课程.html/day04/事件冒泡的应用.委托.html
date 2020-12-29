@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件冒泡的应用.委托</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>hey!programmer,你的头发还好吗？</li>
+        <li>hey!programmer,你的头发还好吗？</li>
+        <li>hey!programmer,你的头发还好吗？</li>
+        <li>hey!programmer,你的头发还好吗？</li>
+        <li>hey!programmer,你的头发还好吗？</li>
+    </ul>
+    <script>
+
+        var ul = document.querySelector('ul');
+        var lis = document.querySelector('li');
+
+        ul.addEventListener('click', function (e) {
+            alert('弹我有惊喜哦!');
+            e.target.style.backgroundColor = 'red';
+            console.log(e);
+            
+        })
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scroll滚动系列</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            overflow: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+        我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+    </div>
+
+    <script>
+
+        var div = document.querySelector('div');
+        console.log(div.scrollTop);
+        console.log(div.scrollLeft);
+        console.log(div.scrollWidth);
+        console.log(div.scrollHeight);
+
+        div.addEventListener('scroll', function () {
+            console.log(div.scrollTop);
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

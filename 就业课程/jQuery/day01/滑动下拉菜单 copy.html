@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动下拉菜单</title>
+
+    <script src="./jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav {
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        .nav>li {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 41px;
+            text-align: center;
+        }
+
+        .nav li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 41px;
+            color: #333;
+        }
+
+        .nav ul li {
+            border-bottom: 1px solid #FECC5B;
+        }
+
+        .nav>li>a:hover {
+            background-color: #eee;
+            color: blue;
+        }
+
+        .nav ul li a:hover {
+            background-color: #FFF5DA;
+            color: red;
+        }
+
+        .nav ul {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid #FECC5B;
+            border-right: 1px solid #FECC5B;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <ul class="nav">
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+
+        // 原生js代码写的下拉菜单
+
+        // var nav = document.querySelector('.nav');
+        // var lis = nav.children;
+
+        // for (var i = 0; i < lis.length; i++) {
+        //     lis[i].onmouseover = function () {
+        //         this.children[1].style.display = 'block';
+        //     }
+        //     lis[i].onmouseout = function () {
+        //         this.children[1].style.display = 'none';
+        //     }
+        // }
+
+        // 用 jquery 写的下拉菜单
+
+        // $(function () {
+        //     // 用 > 号, 表示只选择.nav里边的亲儿子li
+        //     // 当鼠标经过.nav里边的li时，
+        //     $('.nav >li').mouseover(function () {
+
+        //         // 让当前li的儿子元素ul显示
+        //         // this 在jquery里边表示当前元素,不用加引号
+        //         $(this).children('ul').show();
+        //     })
+
+        //     // 当鼠标离开.nav里边的li时，
+        //     $('.nav >li').mouseout(function () {
+
+        //         // 让当前li的儿子元素ul隐藏
+        //         $(this).children('ul').hide();
+        //     })
+
+        // })
+
+        //  滑动版的下拉菜单
+        $(function () {
+
+            // $('.nav >li').mouseover(function () {
+
+            //     $(this).children('ul').slideDown();
+
+            // })
+
+            // $('.nav >li').mouseout(function () {
+
+            //     $(this).children('ul').slideUp();
+
+            // })
+
+            // 简化版1
+
+            // 1. 事件切换 hover 就是鼠标经过和离开的复合写法
+            // $('.nav >li').hover(function () {
+
+            //     $(this).children('ul').slideDown();
+
+            // }, function () {
+
+            //     $(this).children('ul').slideUp();
+            // })
+
+            // 最简化版
+            $('.nav >li').hover(function () {
+
+                $(this).children('ul').slideToggle();
+
+            })
+
+        })
+
+        // 写于 2020.12.10.18: 05 中国.郑州
+    </script>
+
+
+
+
+</body>
+
+</html>

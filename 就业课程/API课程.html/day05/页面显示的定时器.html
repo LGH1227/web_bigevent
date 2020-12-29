@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面显示的定时器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+        }
+
+        li {
+            float: left;
+            width: 100px;
+            height: 60px;
+            font-size: 40px;
+            background-color: green;
+            color: #fff;
+            list-style: none;
+            text-align: center;
+            margin-left: 15px;
+            line-height: 60px;
+            /* text-decoration: line-through; */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul>
+        <li>11</li>
+        <li>12</li>
+        <li>23</li>
+        <li>34</li>
+    </ul>
+
+    <script>
+        // 倒计时，就是设置的时间减去现在的时间，
+        // 以天，时，分，秒的形式去展现的过程
+        var tim = setInterval(function () {
+            fn()
+        }, 1000);
+
+        fn()
+
+
+        function fn() {
+            // 先得到当前时间
+            var nowTime = new Date();
+            // 再设置一个未来的时间
+            var wl = new Date('2021-01-02 00:00:00');
+            // 两个数值相减，差值就是毫秒数，再除以1000，就是秒数
+            var timeCha = parseInt((wl - nowTime) / 1000);
+            // console.log(timeCha);
+            if (timeCha <= 0) {
+                clearInterval(tim);
+            }
+
+            // 秒数 转化成天  时  分  秒(要注意取余的问题)
+            var tian = parseInt(timeCha / 60 / 60 / 24);
+            tian = tian < 10 ? '0' + tian : tian;
+            // console.log(tian);
+
+
+            var hours = parseInt(timeCha / 60 / 60 % 24);
+            hours = hours < 10 ? '0' + hours : hours;
+            // console.log(hours);
+
+
+            var minutes = parseInt(timeCha / 60 % 60);
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            // console.log(minutes);
+
+
+            var seconds = parseInt(timeCha % 60);
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            // console.log(seconds);
+
+            // 获取到所有的li
+            var lis = document.querySelectorAll('li');
+            // lis[0].innerHTML = '离过年还有' + tian + '天';
+            lis[0].innerHTML = tian + '天';
+            lis[1].innerHTML = hours + '时';
+            lis[2].innerHTML = minutes + '分';
+            lis[3].innerHTML = seconds + '秒';
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

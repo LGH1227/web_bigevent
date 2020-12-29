@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>post提交数据</title>
+
+    <script src="../jquery.js"></script>
+    
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <button id="btnpost">用post提交数据</button>
+
+    <script>
+
+        $(function () {
+
+            $('#btnpost').on('click', function () {
+
+                $.post('http://www.liulongbin.top:3006/api/addbook', { bookname: '大学那些事儿', author: 'doctorLuo', publisher: '心灵出版社' }, function (res) {
+                    console.log(res);
+                })
+
+            })
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

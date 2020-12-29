@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window事件</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        // DOMContentLoaded 比 Load 加载更快一些!
+        // window.onload = function () {
+        //     // var btn = document.querySelector('button');
+        //     // btn.onclick = function () {
+        //     //     alert('我出来了!');
+        //     //     alert('今天你又去哪儿了？')
+        //     // }
+        // }
+        // 1,页面加载事件
+        window.addEventListener('load', function () {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function () {
+                alert('轻轻地,我走了!');
+                // alert('正如我轻轻地来!');
+            })
+        })
+
+        window.addEventListener('load', function () {
+            alert('正如我轻轻地来!');
+        })
+
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('你好吗？');
+        })
+
+        // load 等页面内容全部加载完毕，包含页面dom元素 图片 flash  css 等等
+        // DOMContentLoaded 是DOM 加载完毕，不包含图片 falsh css 等就可以执行 加载速度比 load更快一些
+        // 2，调整窗口大小事件
+        window.addEventListener('load', function () {
+            var div = document.querySelector('div');
+            window.addEventListener('resize', function () {
+                console.log(window.innerWidth);
+
+                console.log('变化了');
+                if (window.innerWidth <= 800) {
+                    div.style.display = 'none';
+                } else {
+                    div.style.display = 'block';
+                }
+
+            })
+        })
+
+    </script>
+    <div></div>
+</head>
+
+<body>
+
+    <button>点击我</button>
+
+</body>
+
+</html>

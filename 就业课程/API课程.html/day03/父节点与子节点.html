@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父节点与子节点</title>
+
+    <style>
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <ol>
+        <li>我是ol里边的xiaoli</li>
+        <li>我是ol里边的xiaoli</li>
+        <li>我是ol里边的xiaoli</li>
+        <li>我是ol里边的xiaoli</li>
+        <li>我是ol里边的xiaoli</li>
+    </ol>
+    <div class="box">
+        <span class="erweima">1</span>
+    </div>
+
+    <script>
+        var box = document.querySelector('.box');
+        console.log(box);
+        console.dir(box);
+
+        // 1，父节点 parentNode
+        var box = document.querySelector('.box');
+        var erweima = document.querySelector('.erweima');
+        var erweima = erweima.parentNode; // erweima的父亲，就是div
+        console.log(erweima.parentNode); // erweima 父亲的父亲，就是div的父亲，body
+        var erweima = erweima.parentNode;
+        console.log(erweima.parentNode); // erweima 父亲的父亲的父亲，就是div的父亲的父亲，就是html
+
+        // 2, 子节点 childNodes / children
+        var ol = document.querySelector('ol');
+        var lis = ol.querySelectorAll('li');
+        console.log(lis);
+
+        console.log(ol.childNodes);
+        console.log(ol.childNodes[0].nodeType);
+        console.log(ol.childNodes[1].nodeType);
+        
+        console.log(ol.children);
+        console.log(ol.children[0].nodeType);
+
+        // 用childNodes时，用for循环获取只含有子元素节点的方法
+        var ol = document.querySelector('ol');
+        for (var i = 0; i < ol.childNodes.length; i++) {
+            if (ol.childNodes[i].nodeType == 1) {
+
+                // ol.childNodes[i] 是子元素节点
+                console.log(ol.childNodes[i]);
+
+            }
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

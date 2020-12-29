@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>触发事件的三要素</title>
+</head>
+
+<body>
+    <button class="btn">罗广浩</button>
+    <div>123</div>
+    <script>
+        // 1,获取事件源 2，绑定事件 3.添加事件处理程序
+        // var btn = document.querySelector('button');
+        var btn = document.querySelector('.btn'); // 1,获取事件源
+        //    console.log(btn);
+
+        btn.onclick // 2，绑定事件
+
+        btn.onclick = function () {
+            console.log(123); // 3.添加事件处理程序
+            alert('点秋香');
+        }
+
+        var div = document.querySelector('div');
+        
+        div.onclick = function () {
+            console.log('我被选中了!');
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

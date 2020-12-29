@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点的删除</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <button>删除</button>
+
+    <ul>
+        <li>熊大</li>
+        <li>熊二</li>
+        <li>光头强</li>
+    </ul>
+
+    <script>
+
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        var lis = ul.children;
+        // ul.removeChild(lis[0]);
+        // ul.removeChild(ul.children[0]);
+        // ul.removeChild(lis[0]);
+        // ul.removeChild(lis[0]);
+        console.log(lis);
+
+        btn.onclick = function () {
+
+
+            if (lis.length !== 0) {
+
+                ul.removeChild(lis[0]);
+                btn.disabled = false;
+            } else {
+                btn.disabled = true;
+            }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

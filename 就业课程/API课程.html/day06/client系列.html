@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client系列</title>
+
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border: 10px dashed yellow;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div> </div>
+
+    <script>
+        // offsetWidth 返回数值包含padding 边框border 和内容宽度
+        // element.clientWidth 返回自身包括padding,内容的宽度，不含border边框，返回数值不带单位
+        // element.clientHeight 返回的内容同上
+        // element.clientLeft 返回元素左边框的大小
+        // element.clientTop 返回元素上边框的大小
+        
+        var div = document.querySelector('div');
+        console.log(div.clientWidth);
+        console.log(div.clientHeight);
+        console.log(div.clientLeft);
+        console.log(div.clientTop);
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

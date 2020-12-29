@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印星星</title>
+    <script>
+        for (var i = 0; i <= 500; i++) {
+            console.log('第' + i + '颗' + '★')
+        }
+        console.log('第' + i + '颗' + '★');
+        var str = '';
+        for (var i = 0; i <= 20; i++) {
+            str = str + '★';
+        }
+        console.log(str);
+        var num = prompt('请输入星星的个数:');
+        var str = '';
+        for (var i = 1; i <= num; i++) {
+            str = str + '★'
+            console.log(str);
+        }
+
+        // n行m列的做法!
+        var n = prompt('请您输入行数:');
+        var m = prompt('请您输入列数:');
+        var str = '';
+        for (var i = 1; i <= n; i++) {
+            for (var j = 1; j <= m; j++) {
+
+                str = str + '★';
+                str = str + '\t';
+            }
+            str = str + '\n';
+            // str = str + '★';
+            // if (i % 5 == 0) {
+            // str = str + '\n'
+            // }
+        }
+
+        console.log(str);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码的显示与隐藏</title>
+    <style>
+        div {
+            position: relative;
+            width: 400px;
+            /* height: 50px; */
+            background-color: skyblue;
+            margin: 100px auto;
+        }
+
+        div input {
+            width: 100%;
+            height: 48px;
+            border: 0;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+
+        }
+
+        div img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* width: 24px; */
+            /* height: 24px; */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div>
+        <input type="password" name="" id="">
+        <label>
+            <img src="images/close.png" alt="">
+        </label>
+    </div>
+    <script>
+        var input = document.querySelector('input');
+        var img = document.querySelector('img');
+        var a = 0; // 在这里设定a为点击次数!
+
+        img.onclick = function () {
+            if (a == 0) {
+                input.type = 'text';
+                img.src = "images/open.png";
+                a++;
+
+            } else {
+                input.type = 'password';
+                img.src = "images/close.png";
+                a = 0;
+            }
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

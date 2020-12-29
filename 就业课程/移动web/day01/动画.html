@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+
+            50% {
+                transform: translate(1150px, 0);
+            }
+
+            25% {
+                transform: translate(1100px, 400px);
+            }
+
+            75% {
+                transform: translate(0, 400px);
+
+            }
+
+            85% {
+                transform: translate(0, 0);
+            }
+
+
+            100% {
+                transform: translate(1100px, 400px);
+            }
+        }
+
+        div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            animation: move;
+            animation-duration: 3s;
+        }
+
+        /*  */
+        /* .div2 { */
+        /* float: right; */
+        /* width: 200px; */
+        /* height: 200px; */
+        /* background-color: skyblue; */
+        /* animation: move; */
+        /* animation-duration: .5s; */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+
+
+</body>
+
+</html>

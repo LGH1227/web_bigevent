@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过渡</title>
+    <style>
+        body {
+            transform: perspective(800px);
+            transform: translate3d(1, 0, 0 .5s);
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul li {
+            width: 550px;
+            height: 25px;
+            background-color: pink;
+            margin-top: 5px;
+            transition: all .2s;
+
+        }
+
+        li:nth-child(even) {
+            background-color: yellow;
+        }
+
+        li:nth-child(odd) {
+            width: 350px;
+        }
+
+        ul li:hover:nth-child(n) {
+            background-color: skyblue;
+            width: 100%;
+            height: calc(100%+50px);
+            margin-left: 5px;
+            margin: 10px;
+            border: 2px dashed red;
+            border-radius: 20px;
+            transform: translateY(45deg);
+            margin-top: 20px;
+
+
+        }
+
+        audio:hover {
+            autoplay:"autoplay";
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="../day10/东泽润-红色彼岸花(抖音DJ热搜版).mp3" controls="controls" loop="loop"></audio>
+    <video src="../day10/video_20161127_100218.mp4" controls="controls" muted="muted"></video>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

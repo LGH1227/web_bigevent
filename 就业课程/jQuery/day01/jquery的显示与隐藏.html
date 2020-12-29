@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery的显示与隐藏</title>
+
+    <script src="./jquery.min.js"></script>
+
+    <style>
+        div {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+    <script>
+        // 语法结构 : show('speed','easing',fn)
+        $(function () {
+
+            $('button').eq(1).click(function () {
+
+                $('div').hide('slow', 'linear', function () {
+                    alert('你去哪儿了？')
+                });
+            })
+            $('button').eq(0).click(function () {
+
+                $('div').show('slow');
+            });
+            $('button').eq(2).click(function () {
+
+                $('div').toggle('fast');
+            });
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

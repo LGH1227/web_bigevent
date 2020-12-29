@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构为类选择器</title>
+    <style>
+        ul li:first-child {
+            background-color: pink;
+        }
+
+        ul li:last-child {
+            background-color: skyblue;
+        }
+
+        ul li:nth-child(3) {
+            background-color: red;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: seagreen;
+        }
+
+        ul li:nth-child(even) {
+            background-color: turquoise;
+        }
+
+        ul li:nth-child(2n+1) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1孩子</li>
+        <li>我是第2孩子</li>
+        <li>我是第3孩子</li>
+        <li>我是第4孩子</li>
+        <li>我是第5孩子</li>
+        <li>我是第6孩子</li>
+        <li>我是第7孩子</li>
+        <li>我是第8孩子</li>
+    </ul>
+</body>
+
+</html>
